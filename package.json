@@ -1,0 +1,30 @@
+{
+  "name": "@micazoyolli/foundation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./scss": {
+      "sass": "./dist/scss/index.scss"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && yarn copy-scss",
+    "clean": "rm -rf dist",
+    "copy-scss": "rsync -av --include='*/' --include='*.scss' --exclude='*' src/scss/ dist/scss/",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3"
+  },
+  "packageManager": "yarn@1.22.22"
+}

@@ -1,0 +1,17 @@
+@use '@micazoyolli/foundation/scss' as foundation;
+
+.example {
+  gap: foundation.$space-4;
+  border-radius: foundation.$radius-md;
+  transition-duration: foundation.$duration-base;
+  transition-timing-function: foundation.$ease-standard;
+  z-index: foundation.$z-raised;
+
+  @include foundation.down(foundation.$breakpoint-md) {
+    gap: foundation.$space-3;
+  }
+
+  @include foundation.reduced-motion {
+    transition-duration: 1ms;
+  }
+}
