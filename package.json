@@ -1,7 +1,8 @@
 {
   "name": "@micazoyolli/foundation",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.2",
+  "description": "Fundamentos compartidos no visuales para los proyectos de Micazoyolli.",
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,6 +18,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json && yarn copy-scss",
     "clean": "rm -rf dist",

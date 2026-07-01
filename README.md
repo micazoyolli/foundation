@@ -1,6 +1,6 @@
 # @micazoyolli/foundation
 
-Paquete privado de fundamentos compartidos no visuales para los proyectos de Micazoyolli. Centraliza utilidades pequeñas y estables para mantener consistencia entre repos independientes sin introducir componentes visuales ni decisiones de marca.
+Paquete público de fundamentos compartidos no visuales para los proyectos de Micazoyolli. Centraliza utilidades pequeñas y estables para mantener consistencia entre repos independientes sin introducir componentes visuales ni decisiones de marca.
 
 ## Características
 
@@ -10,14 +10,14 @@ Paquete privado de fundamentos compartidos no visuales para los proyectos de Mic
 - Guards TypeScript pequeños para validaciones comunes
 - Utilidades básicas de accesibilidad y protección selectiva de media
 - Exports separados para TypeScript y SCSS
-- Consumo desde GitHub mediante tags versionados
+- Consumo desde npm sin credenciales especiales
 
 ## Tecnologías
 
 - TypeScript
 - SCSS
 - Yarn 1
-- GitHub tags
+- npm
 
 ## Estructura
 
@@ -44,14 +44,6 @@ yarn prepack
 ```
 
 ## Instalación
-
-Desde GitHub usando un tag estable:
-
-```bash
-yarn add git+ssh://git@github.com/micazoyolli/foundation.git#v0.1.0
-```
-
-Cuando exista un registry privado, el consumo podrá cambiar a:
 
 ```bash
 yarn add @micazoyolli/foundation
@@ -90,7 +82,7 @@ SCSS:
 
 - Mantener el paquete pequeño y estrictamente no visual
 - Evitar tokens de marca, layouts, componentes React, SEO o tipografías finales
-- Publicar cambios mediante tags versionados
+- Publicar cambios mediante versiones semánticas
 - Exportar solo utilidades compartibles entre repos independientes
 - Evitar dependencias UI pesadas
 - Adoptar el paquete gradualmente en cada proyecto
