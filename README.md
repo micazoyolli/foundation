@@ -1,24 +1,65 @@
 # @micazoyolli/foundation
 
-Fundamentos compartidos no visuales para los proyectos de Micazoyolli.
+Paquete privado de fundamentos compartidos no visuales para los proyectos de Micazoyolli. Centraliza utilidades pequeñas y estables para mantener consistencia entre repos independientes sin introducir componentes visuales ni decisiones de marca.
 
-Este paquete contiene primitives pequeñas y estables: tokens SCSS base, mixins responsive, helpers TypeScript mínimos y utilidades básicas de accesibilidad. No incluye componentes React, tokens de marca, layouts, botones, cards, tipografías finales ni SEO.
+## Características
 
-## Instalacion
+- Tokens SCSS base para spacing, radius, z-index y motion
+- Breakpoints y mixins responsive reutilizables
+- Helper `cx` para composición segura de clases
+- Guards TypeScript pequeños para validaciones comunes
+- Utilidades básicas de accesibilidad y protección selectiva de media
+- Exports separados para TypeScript y SCSS
+- Consumo desde GitHub mediante tags versionados
 
-Desde GitHub, usando un tag:
+## Tecnologías
+
+- TypeScript
+- SCSS
+- Yarn 1
+- GitHub tags
+
+## Estructura
+
+```txt
+src/
+├── a11y/
+├── scss/
+│   ├── mixins/
+│   └── tokens/
+├── utils/
+└── index.ts
+
+examples/
+dist/
+```
+
+## Scripts
+
+```bash
+yarn install
+yarn build
+yarn clean
+yarn prepack
+```
+
+## Instalación
+
+Desde GitHub usando un tag estable:
 
 ```bash
 yarn add git+ssh://git@github.com/micazoyolli/foundation.git#v0.1.0
 ```
 
-Cuando el paquete se publique en un registry privado:
+Cuando exista un registry privado, el consumo podrá cambiar a:
 
 ```bash
 yarn add @micazoyolli/foundation
 ```
 
-## Uso en TypeScript
+## Uso
+
+TypeScript:
 
 ```ts
 import { cx, isElement } from '@micazoyolli/foundation';
@@ -30,7 +71,7 @@ if (isElement(event.target)) {
 }
 ```
 
-## Uso en SCSS
+SCSS:
 
 ```scss
 @use '@micazoyolli/foundation/scss' as foundation;
@@ -45,9 +86,15 @@ if (isElement(event.target)) {
 }
 ```
 
-## Principios
+## Buenas prácticas
 
-- Mantener el paquete pequeno y no visual.
-- Evitar nombres ligados a una marca o aplicacion concreta.
-- Exportar primitives estables que puedan usarse en repos independientes.
-- No introducir dependencias UI pesadas.
+- Mantener el paquete pequeño y estrictamente no visual
+- Evitar tokens de marca, layouts, componentes React, SEO o tipografías finales
+- Publicar cambios mediante tags versionados
+- Exportar solo utilidades compartibles entre repos independientes
+- Evitar dependencias UI pesadas
+- Adoptar el paquete gradualmente en cada proyecto
+
+## Autora
+
+Una creación de [`<micazoyolli />✨`](https://nadia.dev)
