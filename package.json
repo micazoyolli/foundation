@@ -1,6 +1,6 @@
 {
   "name": "@micazoyolli/foundation",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Fundamentos compartidos no visuales para los proyectos de Micazoyolli.",
   "license": "MIT",
   "type": "module",
@@ -25,7 +25,8 @@
     "build": "tsc -p tsconfig.json && yarn copy-scss",
     "clean": "rm -rf dist",
     "copy-scss": "rsync -av --include='*/' --include='*.scss' --exclude='*' src/scss/ dist/scss/",
-    "prepack": "yarn build"
+    "prepack": "yarn build",
+    "test": "yarn build && node --test tests/*.test.mjs"
   },
   "devDependencies": {
     "typescript": "6.0.3"

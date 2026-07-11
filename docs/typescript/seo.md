@@ -206,3 +206,114 @@ getStaticRouteOutputPath('/categoria/boda');
 
 - TeInvitaASu.Party: sitemap y HTML estatico por ruta.
 - Micazoyolli: sitemap, HTML estatico por idioma/ruta y hreflang.
+
+## Metadata DOM client-side
+
+Estos helpers actualizan el documento actual en navegador. Son intencionalmente pequenos y no dependen de React.
+
+## `updateDocumentTitle(title, documentRef)`
+
+### Que hace
+
+Asigna `document.title`.
+
+### Cuando usarlo
+
+- En SPAs que actualizan metadata al navegar.
+- Cuando el title viene de un registro local de rutas.
+
+### Cuando NO usarlo
+
+- En SSR/SSG donde el title ya se genera en HTML inicial.
+- Si usas un framework que gestiona metadata por ruta.
+
+### Parametros
+
+- `title: string`
+- `documentRef?: Document`
+
+### Valor de retorno
+
+`void`
+
+## `upsertMeta(selector, attributes, documentRef)`
+
+### Que hace
+
+Busca un `<meta>` por selector. Si existe, actualiza atributos; si no existe, crea uno y lo agrega al `head`.
+
+### Cuando usarlo
+
+- Para `description`, Open Graph, Twitter Cards o robots en SPAs.
+- Para reemplazar helpers locales repetidos de metadata client-side.
+
+### Cuando NO usarlo
+
+- Para metadata especifica del proyecto dentro de foundation.
+- Para transformar HTML estatico; usa `applyHtmlMetadata`.
+
+### Parametros
+
+- `selector: string`
+- `attributes: { content: string; name?: string; property?: string }`
+- `documentRef?: Document`
+
+### Valor de retorno
+
+`HTMLMetaElement`
+
+### Ejemplo
+
+```ts
+upsertMeta('meta[name="description"]', {
+  name: 'description',
+  content: route.description,
+});
+```
+
+## `upsertCanonical(href, documentRef)`
+
+### Que hace
+
+Crea o actualiza `<link rel="canonical">`.
+
+### Parametros
+
+- `href: string`
+- `documentRef?: Document`
+
+### Valor de retorno
+
+`HTMLLinkElement`
+
+## `upsertAlternate(hreflang, href, documentRef)`
+
+### Que hace
+
+Crea o actualiza `<link rel="alternate" hreflang="...">`.
+
+### Parametros
+
+- `hreflang: string`
+- `href: string`
+- `documentRef?: Document`
+
+### Valor de retorno
+
+`HTMLLinkElement`
+
+### Ejemplo real
+
+```ts
+updateDocumentTitle(route.title);
+upsertCanonical(canonical);
+upsertAlternate('es', spanishUrl);
+upsertAlternate('en', englishUrl);
+```
+
+## Proyectos con metadata DOM client-side
+
+- TeInvitaASu.Party.
+- Micazoyolli.
+- OhMamaMXX.
+- Estilo Natura.

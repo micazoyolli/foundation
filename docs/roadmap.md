@@ -14,8 +14,8 @@ El roadmap prioriza consolidar `foundation` como una base estable y no visual. N
 
 1. Completar documentacion tecnica.
 2. Agregar ejemplos pequenos de consumo por entorno.
-3. Revisar si los helpers SEO/build necesitan tests unitarios ligeros.
-4. Identificar si `cx` necesita aceptar arrays u objetos antes de cambiarlo; por ahora no.
+3. Identificar si `cx` necesita aceptar arrays u objetos antes de cambiarlo; por ahora no.
+4. Evaluar si las primitivas de focus necesitan ejemplos adicionales por framework.
 
 ## Mediano plazo
 
@@ -31,6 +31,8 @@ El roadmap prioriza consolidar `foundation` como una base estable y no visual. N
 - Botones, cards, layouts o grids visuales.
 - SEO metadata especifica de proyectos.
 - Storybook, VitePress o sitio de documentacion.
+- Smoke harness compartido.
+- Binder de proteccion de media.
 - Dependencias UI pesadas.
 
 ## Criterio para aceptar nuevos helpers

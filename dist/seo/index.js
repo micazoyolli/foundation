@@ -2,3 +2,4 @@ export { applyHtmlMetadata, getAlternateLinkTags, getStaticRouteOutputPath, remo
 export { buildSitemapXml } from './sitemap.js';
 export { escapeHtml, escapeXml } from './text.js';
 export { getAbsoluteUrl, getCanonicalUrl, isAbsoluteUrl, normalizeBaseUrl, normalizeRoutePath, } from './url.js';
+export { updateDocumentTitle, upsertAlternate, upsertCanonical, upsertMeta, } from './dom.js';

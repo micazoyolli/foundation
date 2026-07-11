@@ -56,7 +56,8 @@ SCSS:
 - `cx` para composicion simple de clases.
 - Guards TypeScript pequenos.
 - Helpers DOM/a11y para targets, teclado y media protegida.
-- Helpers SEO/build para escaping, canonical, sitemap y HTML estatico.
+- Helpers DOM/a11y para foco, scroll lock, Escape y focus trap.
+- Helpers SEO/build para escaping, canonical, sitemap, metadata DOM y HTML estatico.
 
 ## Que NO incluye
 

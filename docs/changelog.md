@@ -2,6 +2,23 @@
 
 Este changelog resume cambios relevantes del paquete. Para cambios detallados, revisar los commits del repositorio.
 
+## 0.3.0
+
+- Agrega helpers DOM para metadata client-side:
+  - `updateDocumentTitle`;
+  - `upsertMeta`;
+  - `upsertCanonical`;
+  - `upsertAlternate`.
+- Agrega primitivas DOM de accesibilidad:
+  - `getFocusableElements`;
+  - `lockBodyScroll`;
+  - `unlockBodyScroll`;
+  - `restoreFocus`;
+  - `trapTabKey`;
+  - `createEscapeKeyHandler`.
+- Agrega tests con `node:test`.
+- Mantiene el paquete sin React y sin datos de marca.
+
 ## 0.2.0
 
 - Agrega helpers SEO/build puros:
