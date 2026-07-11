@@ -9,6 +9,7 @@ Paquete público de fundamentos compartidos no visuales para los proyectos de Mi
 - Helper `cx` para composición segura de clases
 - Guards TypeScript pequeños para validaciones comunes
 - Utilidades básicas de accesibilidad y protección selectiva de media
+- Helpers SEO/build puros para HTML estático, canonical y sitemap
 - Exports separados para TypeScript y SCSS
 - Consumo desde npm sin credenciales especiales
 
@@ -27,6 +28,7 @@ src/
 ├── scss/
 │   ├── mixins/
 │   └── tokens/
+├── seo/
 ├── utils/
 └── index.ts
 
@@ -63,6 +65,24 @@ if (isElement(event.target)) {
 }
 ```
 
+SEO/build:
+
+```ts
+import {
+  applyHtmlMetadata,
+  buildSitemapXml,
+  getCanonicalUrl,
+} from '@micazoyolli/foundation';
+
+const canonical = getCanonicalUrl('https://example.com', '/contacto');
+const html = applyHtmlMetadata(template, {
+  canonical,
+  title: 'Contacto',
+  description: 'Hablemos de tu proyecto.',
+});
+const sitemap = buildSitemapXml([{ loc: canonical, priority: '0.8' }]);
+```
+
 SCSS:
 
 ```scss
@@ -81,7 +101,7 @@ SCSS:
 ## Buenas prácticas
 
 - Mantener el paquete pequeño y estrictamente no visual
-- Evitar tokens de marca, layouts, componentes React, SEO o tipografías finales
+- Evitar tokens de marca, layouts, componentes React, metadata específica o tipografías finales
 - Publicar cambios mediante versiones semánticas
 - Exportar solo utilidades compartibles entre repos independientes
 - Evitar dependencias UI pesadas

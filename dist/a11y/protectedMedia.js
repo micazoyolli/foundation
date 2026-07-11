@@ -1,4 +1,4 @@
-import { isElement } from './targets';
+import { isElement } from './targets.js';
 export const PROTECTED_MEDIA_SELECTOR = [
     'img',
     'svg',

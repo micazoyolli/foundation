@@ -5,7 +5,8 @@ export {
   isHTMLElement,
   isKeyboardActivation,
   isProtectedMediaTarget,
-} from './a11y';
-export { cx } from './utils/cx';
-export type { ClassValue } from './utils/cx';
-export { isNonEmptyString } from './utils/guards';
+} from './a11y/index.js';
+export { cx } from './utils/cx.js';
+export type { ClassValue } from './utils/cx.js';
+export { isNonEmptyString } from './utils/guards.js';
+export * from './seo/index.js';
