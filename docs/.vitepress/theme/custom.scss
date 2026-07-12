@@ -276,6 +276,14 @@ a {
   box-shadow: 0 12px 30px rgba(6, 10, 52, 0.08);
 }
 
+.VPHome > div[style*='position: relative'] > div,
+.VPHome > div[style*='position:relative'] > div {
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-width: 72rem;
+  padding-inline: foundation.$space-6;
+}
+
 .vp-doc h1,
 .vp-doc h2 {
   font-family: 'Barriecito', var(--vp-font-family-base);
@@ -696,6 +704,11 @@ a {
 }
 
 @include foundation.down(foundation.$breakpoint-md) {
+  .VPHome > div[style*='position: relative'] > div,
+  .VPHome > div[style*='position:relative'] > div {
+    padding-inline: foundation.$space-4;
+  }
+
   .VPNavBarTitle {
     min-width: max-content;
   }
