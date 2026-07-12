@@ -1,7 +1,7 @@
 import DefaultTheme from 'vitepress/theme';
 import { h } from 'vue';
 import { useData } from 'vitepress';
-import './custom.css';
+import './custom.scss';
 
 let escapeHandlerReady = false;
 

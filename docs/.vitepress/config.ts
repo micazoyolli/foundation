@@ -175,6 +175,7 @@ export default defineConfig({
   cleanUrls: true,
   description: 'Fundamentos frontend no visuales para el ecosistema técnico de Nad.',
   head: [
+    ['link', { rel: 'icon', href: '/foundation-mark.svg', type: 'image/svg+xml' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Barriecito&family=La+Belle+Aurore&family=Titillium+Web:wght@400;600;700&display=swap' }],

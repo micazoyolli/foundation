@@ -32,6 +32,7 @@
     "test": "yarn build && node --test tests/*.test.mjs"
   },
   "devDependencies": {
+    "sass-embedded": "^1.100.0",
     "typescript": "6.0.3",
     "vitepress": "^1.6.4"
   },
