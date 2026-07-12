@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Foundation
-  text: La base tecnica detras del ecosistema frontend de Nad.
+  text: La base técnica detrás del ecosistema frontend de Nadia.
   tagline: '@micazoyolli/foundation · Tokens SCSS, helpers TypeScript, primitivas DOM, accesibilidad y SEO/build para proyectos reales.'
   image:
     src: /foundation-mark.svg
@@ -13,29 +13,29 @@ hero:
       text: Empezar
       link: /getting-started/
     - theme: alt
-      text: Documentacion
+      text: Documentación
       link: /foundations/why-foundation
 
 features:
-  - title: Pequena
+  - title: Pequeña
     details: Incluye solo fundamentos probados en proyectos reales. Nada de abstracciones por si acaso.
     link: /foundations/philosophy
-  - title: Agnostica
-    details: Funciona con React, Vue, Angular, Astro, Vite, Next.js y scripts Node segun el tipo de helper.
+  - title: Agnóstica
+    details: Funciona con React, Vue, Angular, Astro, Vite, Next.js y scripts Node según el tipo de helper.
     link: /foundations/compatibility
   - title: Accesible
     details: Incluye primitivas DOM para focus, Escape, scroll lock y media protegida selectiva.
     link: /typescript/accessibility
   - title: Lista para build
-    details: Ayuda con canonical, sitemap, metadata HTML y rutas estaticas sin conocer tu marca.
+    details: Ayuda con canonical, sitemap, metadata HTML y rutas estáticas sin conocer tu marca.
     link: /typescript/seo
 ---
 
 <p class="foundation-kicker">@micazoyolli/foundation</p>
 
-## Que es Foundation
+## Qué es Foundation
 
-`@micazoyolli/foundation` es la base compartida para construir el ecosistema con una misma filosofia tecnica: piezas pequeñas, agnosticas a marca y extraidas de necesidades reales.
+`@micazoyolli/foundation` es la base compartida para construir el ecosistema con una misma filosofía técnica: piezas pequeñas, agnósticas a marca y extraidas de necesidades reales.
 
 ```bash
 yarn add @micazoyolli/foundation
@@ -51,7 +51,7 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
 
 <div class="foundation-grid">
   <div class="foundation-card">
-    <strong>Version actual</strong>
+    <strong>Versión actual</strong>
     <p><code>0.3.1</code></p>
   </div>
   <div class="foundation-card">
@@ -64,7 +64,7 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
   </div>
   <div class="foundation-card">
     <strong>Compatibilidad</strong>
-    <p>SCSS, navegador y scripts Node segun el helper.</p>
+    <p>SCSS, navegador y scripts Node según el helper.</p>
   </div>
   <div class="foundation-card">
     <strong>GitHub</strong>
@@ -74,7 +74,7 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
 
 ## Asi se construye el ecosistema
 
-Foundation forma parte del ecosistema tecnico de Nad. No compite con cada marca ni con cada interfaz: sostiene lo repetible para que cada proyecto pueda concentrarse en su identidad, contenido y experiencia.
+Foundation forma parte del ecosistema técnico de Nadia. No compite con cada marca ni con cada interfaz: sostiene lo repetible para que cada proyecto pueda concentrarse en su identidad, contenido y experiencia.
 
 - Portafolio: [nadia.dev](https://nadia.dev)
 - GitHub: [github.com/micazoyolli](https://github.com/micazoyolli)

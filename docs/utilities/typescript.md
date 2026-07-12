@@ -1,13 +1,13 @@
 # Utilidades TypeScript
 
-Las utilidades TypeScript son pequenas, sin framework y sin estado global.
+Las utilidades TypeScript son pequeñas, sin framework y sin estado global.
 
 ## Exports principales
 
 - `cx`: composicion simple de clases.
 - `isNonEmptyString`: guard para strings con contenido.
 - DOM/a11y: focus, keyboard, media protegida y targets.
-- SEO/build: escaping, canonical, sitemap, metadata y HTML estatico.
+- SEO/build: escaping, canonical, sitemap, metadata y HTML estático.
 
 Archivo/export relacionado:
 [src/index.ts](https://github.com/micazoyolli/foundation/blob/master/src/index.ts)

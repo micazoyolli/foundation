@@ -1,4 +1,4 @@
-# Instalacion
+# Instalación
 
 ## Requisitos
 
@@ -6,7 +6,7 @@
 - Yarn 1 en los repos actuales.
 - Sass si se consume el entrypoint SCSS.
 
-## Instalacion
+## Instalación
 
 ```bash
 yarn add @micazoyolli/foundation
@@ -30,25 +30,25 @@ El entrypoint SCSS expone tokens y mixins mediante `@forward`.
 
 ## Versionado
 
-El paquete usa versionado semantico:
+El paquete usa versionado semántico:
 
-- `patch`: correcciones internas o documentacion.
-- `minor`: nuevos helpers compatibles hacia atras.
-- `major`: cambios incompatibles en nombres, parametros o comportamiento.
+- `patch`: correcciones internas o documentación.
+- `minor`: nuevos helpers compatibles hacia atrás.
+- `major`: cambios incompatibles en nombres, parámetros o comportamiento.
 
-## Cuando actualizar
+## Cuándo actualizar
 
 Actualiza un proyecto cuando el cambio aporte valor real en ese repo. No migres por inercia.
 
-## Cuando NO actualizar
+## Cuándo no actualizar
 
 No actualices si:
 
 - el proyecto no usa los helpers nuevos;
-- el cambio solo aumentaria el diff;
-- hay una fase de deploy critica y no hay tiempo de validar build/smoke.
+- el cambio solo aumentaría el diff;
+- hay una fase de deploy crítica y no hay tiempo de validar build/smoke.
 
-## Validacion minima despues de instalar
+## Validación mínima después de instalar
 
 ```bash
 yarn install
@@ -61,6 +61,6 @@ Si el repo tiene smoke checks:
 yarn smoke
 ```
 
-## Uso en produccion
+## Uso en producción
 
-Foundation se utiliza como base compartida en sitios de produccion, aplicaciones de negocio y experiencias interactivas. Puedes conocer mas del ecosistema en [nadia.dev](https://nadia.dev).
+Foundation se utiliza como base compartida en sitios de producción, aplicaciones de negocio y experiencias interactivas. Puedes conocer más del ecosistema en [nadia.dev](https://nadia.dev).

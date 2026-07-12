@@ -18,25 +18,25 @@ La escala de spacing define pasos base para separar elementos sin acoplarse a un
 | `$space-9` | `6rem` |
 | `$space-10` | `8rem` |
 
-## Que hace
+## Qué hace
 
 Da nombres consistentes a medidas de separacion frecuentes.
 
-## Cuando usarlo
+## Cuándo usarlo
 
-- Para padding, margin y gaps no especificos de marca.
+- Para padding, margin y gaps no específicos de marca.
 - Para evitar escalas distintas entre repos.
 - Para componentes internos que no dependen de una identidad visual concreta.
 
-## Cuando NO usarlo
+## Cuándo no usarlo
 
 - Cuando el espaciado sea parte esencial del arte visual de una invitacion o sitio.
-- Cuando un componente necesita una medida optica especifica.
+- Cuando un componente necesita una medida optica específica.
 - Cuando aplicar la escala cambie el resultado visual actual sin justificacion.
 
 ## Parametros
 
-No recibe parametros.
+No recibe parámetros.
 
 ## Valor de retorno
 
@@ -78,12 +78,12 @@ Los radius son parte del entrypoint SCSS y sirven para mantener radios base cons
 | `$radius-xl` | `16px` |
 | `$radius-pill` | `999px` |
 
-### Cuando usar radius
+### Cuándo usar radius
 
-- En superficies, inputs o controles no especificos de marca.
+- En superficies, inputs o controles no específicos de marca.
 - Cuando un proyecto ya usa valores equivalentes.
 
-### Cuando NO usar radius
+### Cuándo no usar radius
 
 - Si el radio forma parte de la identidad visual de una marca concreta.
 - Si cambiar el valor altera la silueta visible de un componente existente.
@@ -111,7 +111,7 @@ Sass en proyectos que consumen `@micazoyolli/foundation/scss`.
 
 ## Tokens relacionados: z-index
 
-Los z-index definen capas genericas para evitar numeros magicos.
+Los z-index definen capas genericas para evitar números mágicos.
 
 | Token | Valor |
 | --- | --- |
@@ -123,12 +123,12 @@ Los z-index definen capas genericas para evitar numeros magicos.
 | `$z-modal` | `1100` |
 | `$z-toast` | `1200` |
 
-### Cuando usar z-index
+### Cuándo usar z-index
 
-- Para headers, overlays, modales y toasts con jerarquia comun.
+- Para headers, overlays, modales y toasts con jerarquiacomún.
 - Para reducir conflictos entre capas.
 
-### Cuando NO usar z-index
+### Cuándo no usar z-index
 
 - Para solucionar rapidamente un bug de stacking sin entender el contexto.
 - Si el componente vive dentro de un stacking context local que necesita una escala propia.

@@ -39,7 +39,7 @@ Foundation vive en imports. La marca vive en tu proyecto.
 }
 ```
 
-Correcto: usar spacing base para estructura comun.
+Correcto: usar spacing base para estructuracomún.
 
 Incorrecto: mover `brand.$color-primary` a Foundation.
 
@@ -73,12 +73,12 @@ Tu proyecto debe conservar:
 
 - `SITE_URL`;
 - rutas reales;
-- titulos;
+- títulos;
 - descripciones;
-- imagenes OG;
+- imágenes OG;
 - reglas de robots.
 
-## 7. Smoke tests minimos
+## 7. Smoke tests mínimos
 
 Valida lo barato antes de escalar:
 
@@ -89,8 +89,8 @@ yarn smoke
 
 Recomendado:
 
-- rutas criticas;
-- metadata basica;
+- rutas críticas;
+- metadata básica;
 - errores de consola;
 - un flujo interactivo clave.
 
@@ -101,9 +101,9 @@ Mantén estos recursos separados:
 - `favicon`: icono pequeño, puede ser transparente;
 - `apple-touch-icon`: icono para iOS;
 - `manifest icons`: iconos PWA, normalmente 192x192 y 512x512;
-- `maskable`: solo cuando el diseño fue preparado para ese proposito.
+- `maskable`: solo cuando el diseño fue preparado para ese propósito.
 
-No reutilices automaticamente un icono de manifest como favicon si cambia el aspecto original.
+No reutilices automáticamente un icono de manifest como favicon si cambia el aspecto original.
 
 ## React + Vite
 
@@ -162,4 +162,4 @@ const html = applyHtmlMetadata(template, route.metadata);
 
 ## Regla principal
 
-Si una decision cambia la identidad del proyecto, se queda en el proyecto. Si una mecanica se repite sin marca en varios repos, puede ser candidata para Foundation.
+Si una decisión cambia la identidad del proyecto, se queda en el proyecto. Si una mecánica se repite sin marca en varios repos, puede ser candidata para Foundation.

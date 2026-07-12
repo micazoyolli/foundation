@@ -34,8 +34,8 @@ Archivos relacionados:
 - [src/a11y/focus.ts](https://github.com/micazoyolli/foundation/blob/master/src/a11y/focus.ts)
 - [src/a11y/keyboard.ts](https://github.com/micazoyolli/foundation/blob/master/src/a11y/keyboard.ts)
 
-## Cuando no usar este patron
+## Cuándo no usar este patrón
 
 - Comboboxes, menus complejos o overlays con portales anidados.
 - Casos que necesitan `inert`, stacking manager o locks anidados.
-- Componentes ya cubiertos por una libreria accesible madura.
+- Componentes ya cubiertos por una librería accesible madura.

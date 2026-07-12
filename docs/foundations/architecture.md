@@ -14,7 +14,7 @@ src/
   utils/
 ```
 
-## Entry points publicos
+## Entry points públicos
 
 TypeScript:
 
@@ -30,7 +30,7 @@ SCSS:
 
 ## Exports
 
-Los exports publicos viven en:
+Los exports públicos viven en:
 
 - [src/index.ts](https://github.com/micazoyolli/foundation/blob/master/src/index.ts)
 - [src/scss/index.scss](https://github.com/micazoyolli/foundation/blob/master/src/scss/index.scss)

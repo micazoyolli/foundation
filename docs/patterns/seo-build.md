@@ -1,11 +1,11 @@
 # Patron SEO/build
 
-Foundation comparte la mecanica; cada proyecto conserva su registro de rutas y metadata.
+Foundation comparte la mecánica; cada proyecto conserva su registro de rutas y metadata.
 
 ## Flujo recomendado
 
 1. El proyecto define `routes`.
-2. El proyecto calcula canonical e imagenes.
+2. El proyecto calcula canonical e imágenes.
 3. Foundation genera sitemap o aplica metadata a HTML.
 4. El build valida los archivos generados.
 
@@ -34,4 +34,4 @@ Archivos relacionados:
 
 - No mover `SITE_URL` de un proyecto a foundation.
 - No mover rutas reales a foundation.
-- No generar imagenes OG desde foundation.
+- No generar imágenes OG desde foundation.

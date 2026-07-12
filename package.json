@@ -1,7 +1,7 @@
 {
   "name": "@micazoyolli/foundation",
   "version": "0.3.1",
-  "description": "Fundamentos frontend no visuales para el ecosistema tecnico de Nad.",
+  "description": "Fundamentos frontend no visuales para el ecosistema técnico de Nadia.",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",

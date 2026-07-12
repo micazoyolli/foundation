@@ -1,6 +1,6 @@
 # Uso correcto e incorrecto
 
-## Correcto: mover mecanica repetida
+## Correcto: mover mecánica repetida
 
 ```ts
 import { buildSitemapXml } from '@micazoyolli/foundation';
@@ -30,7 +30,7 @@ export const WTFASHION_ROUTES = [...];
 ## Incorrecto: reemplazar decisiones visuales de marca
 
 ```scss
-// Si este radio es parte del arte visual de la marca, dejalo local.
+// Si este radio es parte del arte visual de la marca, déjalo local.
 .heroCard {
   border-radius: foundation.$radius-md;
 }

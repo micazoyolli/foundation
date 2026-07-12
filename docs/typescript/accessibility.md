@@ -1,6 +1,6 @@
 # TypeScript: Accessibility
 
-Foundation incluye primitivas DOM pequeñas para patrones repetidos de accesibilidad. No reemplazan una libreria completa de componentes accesibles.
+Foundation incluye primitivas DOM pequeñas para patrones repetidos de accesibilidad. No reemplazan una librería completa de componentes accesibles.
 
 ## Focus management
 
@@ -12,7 +12,7 @@ import {
 } from '@micazoyolli/foundation';
 ```
 
-### Que hace
+### Qué hace
 
 - `getFocusableElements(container)` obtiene elementos enfocables visibles para teclado.
 - `trapTabKey(event, container)` mantiene Tab dentro de un panel.
@@ -21,8 +21,8 @@ import {
 <div class="visual-card overlay-demo">
   <div class="overlay-demo-panel">
     <strong>Panel accesible</strong>
-    <p>Tab cicla dentro del panel y Escape puede cerrar.</p>
-    <button class="focus-demo">Accion primaria</button>
+    <p>Tab circula dentro del panel y Escape puede cerrar.</p>
+    <button class="focus-demo">Acción primaria</button>
   </div>
 </div>
 
@@ -35,12 +35,12 @@ const lock = lockBodyScroll();
 unlockBodyScroll(lock);
 ```
 
-### Cuando usarlo
+### Cuándo usarlo
 
 - Drawers y modales simples.
 - Overlays que deben evitar scroll del fondo.
 
-### Cuando no usarlo
+### Cuándo no usarlo
 
 - Locks anidados complejos.
 - Componentes que ya tienen un manager accesible robusto.
@@ -66,26 +66,26 @@ document.addEventListener('contextmenu', (event) => {
 
 <div class="visual-card protected-media-demo">
   <div class="protected-media-thumb" data-protected-media>IMG</div>
-  <p>Protege elementos concretos sin bloquear seleccion, teclado o lectura global.</p>
+  <p>Protege elementos concretos sin bloquear selección, teclado o lectura global.</p>
 </div>
 
 ## Accesibilidad
 
-Estas utilidades deben acompañarse con HTML semantico, labels, `aria-*` cuando aplique y focus visible definido por el proyecto.
+Estas utilidades deben acompañarse con HTML semántico, labels, `aria-*` cuando aplique y focus visible definido por el proyecto.
 
 ## Focus visible
 
 Foundation no exporta estilos globales de focus. El proyecto consumidor debe mantener un indicador visible, consistente y con contraste suficiente.
 
 <div class="visual-card">
-  <a class="focus-demo" href="#focus-visible">Enfocame con Tab</a>
+  <a class="focus-demo" href="#focus-visible">Enfócame con Tab</a>
 </div>
 
 ## Resultado visual de media protegida
 
 <div class="visual-card protected-media-demo">
   <div class="protected-media-thumb" data-protected-media>IMG</div>
-  <p>La proteccion se limita a media concreta. No bloquea seleccion global, teclado ni lectura.</p>
+  <p>La protección se limita a media concreta. No bloquea selección global, teclado ni lectura.</p>
 </div>
 
 Archivo/export relacionado:

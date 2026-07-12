@@ -1,19 +1,19 @@
 # Atomic UI — Futuro
 
-Foundation Core no incluye componentes visuales. Esta pagina prepara el criterio para una capa futura sin crear APIs ficticias.
+Foundation Core no incluye componentes visuales. Esta página prepara el criterio para una capa futura sin crear APIs ficticias.
 
 ## Estado actual
 
 - No hay componentes React.
-- No hay botones.
+- No hay botónes.
 - No hay cards.
 - No hay layouts.
 - No hay tokens de marca.
-- No hay tipografias finales.
+- No hay tipografías finales.
 
 ## Atoms
 
-Si algun dia existen, deberan ser piezas pequeñas, accesibles y sin marca final.
+Si algún día existen, deberán ser piezas pequeñas, accesibles y sin marca final.
 
 Ejemplos de nombres reservados:
 
@@ -26,7 +26,7 @@ No existen hoy como exports.
 
 ## Molecules
 
-Deberan componer atoms reales y resolver un patron probado en varios proyectos.
+Deberan componer atoms reales y resolver un patrón probado en varios proyectos.
 
 Ejemplos de nombres reservados:
 
@@ -38,7 +38,7 @@ No existen hoy como exports.
 
 ## Organisms
 
-Solo tendrian sentido si varios proyectos comparten estructura y comportamiento, no solo apariencia.
+Solo tendrían sentido si varios proyectos comparten estructura y comportamiento, no solo apariencia.
 
 Ejemplos de nombres reservados:
 
@@ -54,9 +54,9 @@ No existen hoy como exports.
 - Accesibilidad validada.
 - Props pequeñas y estables.
 - Sin tokens de marca.
-- Documentacion con ejemplo correcto/incorrecto.
+- Documentación con ejemplo correcto/incorrecto.
 - Tests o smoke visual cuando aplique.
 
-## Por que no forma parte de Core
+## Por qué no forma parte de Core
 
-Core debe seguir siendo agnostico a frameworks. Atomic UI probablemente viviria en otro paquete o en una extension claramente separada para no obligar a todos los consumidores a cargar React o estilos visuales.
+Core debe seguir siendo agnóstico a frameworks. Atomic UI probablemente viviria en otro paquete o en una extensión claramente separada para no obligar a todos los consumidores a cargar React o estilos visuales.

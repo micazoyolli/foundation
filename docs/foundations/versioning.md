@@ -1,14 +1,14 @@
 # Versionado y actualizaciones
 
-Foundation usa versionado semantico.
+Foundation usa versionado semántico.
 
 ## Tipos de cambio
 
-- `patch`: documentacion, tests o fixes internos compatibles.
-- `minor`: helpers nuevos compatibles hacia atras.
-- `major`: cambios incompatibles en nombres, parametros o comportamiento.
+- `patch`: documentación, tests o fixes internos compatibles.
+- `minor`: helpers nuevos compatibles hacia atrás.
+- `major`: cambios incompatibles en nombres, parámetros o comportamiento.
 
-## Como adoptar una nueva version
+## Cómo adoptar una nueva versión
 
 1. Lee [Changelog](../changelog.md).
 2. Actualiza la dependencia en un solo repo primero.
@@ -24,12 +24,12 @@ yarn build
 yarn smoke
 ```
 
-## Cuando esperar
+## Cuándo esperar
 
-No actualices si el proyecto no consume los nuevos helpers, si no hay tiempo de validar o si la version entra durante una ventana critica de deploy.
+No actualices si el proyecto no consume los nuevos helpers, si no hay tiempo de validar o si la versión entra durante una ventana crítica de deploy.
 
-## Que nunca debe romper una minor
+## Qué nunca debe romper una minor
 
 - Imports existentes desde `@micazoyolli/foundation`.
 - Imports existentes desde `@micazoyolli/foundation/scss`.
-- Comportamiento documentado de helpers publicos.
+- Comportamiento documentado de helpers públicos.

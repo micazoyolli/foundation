@@ -1,21 +1,21 @@
 # TypeScript: SEO y build
 
-Estos helpers son puros y no conocen rutas, dominios, marcas ni metadata especifica. Cada proyecto conserva sus propios registros SEO.
+Estos helpers son puros y no conocen rutas, dominios, marcas ni metadata específica. Cada proyecto conserva sus propios registros SEO.
 
 ## `escapeHtml(value)`
 
-### Que hace
+### Qué hace
 
 Escapa `&`, `<`, `>` y `"` para usar valores dentro de HTML.
 
-### Cuando usarlo
+### Cuándo usarlo
 
-Antes de insertar titulos, descripciones o nombres en tags HTML generados por scripts.
+Antes de insertar títulos, descripciones o nombres en tags HTML generados por scripts.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 - Si el valor ya fue escapado.
-- Para sanitizar HTML arbitrario de usuarios. No es un sanitizer.
+- Para sanitizar HTML arbitrario de usuarios. No es un sanitizador.
 
 ### Parametros
 
@@ -27,15 +27,15 @@ Antes de insertar titulos, descripciones o nombres en tags HTML generados por sc
 
 ## `escapeXml(value)`
 
-### Que hace
+### Qué hace
 
-Aplica `escapeHtml` y ademas escapa `'` como `&apos;`.
+Aplica `escapeHtml` y además escapa `'` como `&apos;`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 Para `sitemap.xml` o XML generado en build.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 Para contenido HTML normal si no necesitas escapar apostrofes.
 
@@ -53,7 +53,7 @@ Detecta URLs `http` o `https`.
 
 ## `getCanonicalUrl(baseUrl, routePath, options)`
 
-### Que hace
+### Qué hace
 
 Construye una URL canonical estable desde dominio y ruta.
 
@@ -77,17 +77,17 @@ getCanonicalUrl('https://nadia.dev/', '/en/about/');
 
 ## `getAbsoluteUrl(value, baseUrl, options)`
 
-### Que hace
+### Qué hace
 
 Devuelve `value` si ya es absoluta; si es relativa, genera una URL canonical con `baseUrl`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
-Para imagenes OG que pueden venir como `/meta.jpg` o como URL absoluta.
+Para imágenes OG que pueden venir como `/meta.jpg` o como URL absoluta.
 
 ## `buildSitemapXml(entries, options)`
 
-### Que hace
+### Qué hace
 
 Genera XML de sitemap desde entradas ya normalizadas.
 
@@ -137,20 +137,20 @@ const xml = buildSitemapXml([
 
 ## `applyHtmlMetadata(html, metadata, alternates)`
 
-### Que hace
+### Qué hace
 
-Reemplaza o inserta tags SEO comunes en un HTML ya generado.
+Reemplaza o inserta tags SEOcomúnes en un HTML ya generado.
 
-### Cuando usarlo
+### Cuándo usarlo
 
-- En SPAs que generan HTML estatico por ruta.
+- En SPAs que generan HTML estático por ruta.
 - En scripts postbuild.
-- Para compartir la mecanica de reemplazo sin mover metadata de marca a foundation.
+- Para compartir la mecánica de reemplazo sin mover metadata de marca a foundation.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 - Para SSR completo.
-- Para metadata que depende de ejecucion en servidor por request.
+- Para metadata que depende de ejecución en servidor por request.
 - Si el HTML no tiene `</head>`.
 
 ### Parametros
@@ -172,7 +172,7 @@ const html = applyHtmlMetadata(template, {
   image: 'https://nadia.dev/meta.jpg',
   lang: 'en',
   siteName: '&lt;micazoyolli /&gt;',
-  title: 'About | Nad',
+  title: 'About | Nadia',
 }, [
   { hreflang: 'es', href: 'https://nadia.dev/sobre-mi' },
   { hreflang: 'en', href: 'https://nadia.dev/en/about' },
@@ -191,15 +191,15 @@ const html = applyHtmlMetadata(template, {
 
 ## `upsertMetaTag(html, selector, tag)` y `upsertLinkTag(html, selector, tag)`
 
-### Que hacen
+### Qué hacen
 
 Reemplazan un tag existente por selector textual simple o insertan el tag antes de `</head>`.
 
-### Cuando usarlos
+### Cuándo usarlos
 
-Para casos especificos que `applyHtmlMetadata` no cubre, como un `apple-touch-icon` local.
+Para casos específicos que `applyHtmlMetadata` no cubre, como un `apple-touch-icon` local.
 
-### Cuando NO usarlos
+### Cuándo no usarlos
 
 Para parsear HTML complejo o transformar documentos arbitrarios. Si el caso crece, usa un parser.
 
@@ -209,9 +209,9 @@ Helpers para regenerar `hreflang` sin duplicados.
 
 ## `getStaticRouteOutputPath(routePath)`
 
-### Que hace
+### Qué hace
 
-Convierte una ruta publica a archivo HTML estatico.
+Convierte una ruta pública a archivo HTML estático.
 
 ### Ejemplo
 
@@ -220,26 +220,26 @@ getStaticRouteOutputPath('/categoria/boda');
 // "categoria/boda/index.html"
 ```
 
-## Uso en produccion
+## Uso en producción
 
-Foundation se utiliza como base compartida para generar metadata, canonical y sitemaps en sitios de produccion, aplicaciones de negocio y experiencias interactivas. Puedes conocer mas del ecosistema en [nadia.dev](https://nadia.dev).
+Foundation se utiliza como base compartida para generar metadata, canonical y sitemaps en sitios de producción, aplicaciones de negocio y experiencias interactivas. Puedes conocer más del ecosistema en [nadia.dev](https://nadia.dev).
 
 ## Metadata DOM client-side
 
-Estos helpers actualizan el documento actual en navegador. Son intencionalmente pequenos y no dependen de React.
+Estos helpers actualizan el documento actual en navegador. Son intencionalmente pequeños y no dependen de React.
 
 ## `updateDocumentTitle(title, documentRef)`
 
-### Que hace
+### Qué hace
 
 Asigna `document.title`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 - En SPAs que actualizan metadata al navegar.
 - Cuando el title viene de un registro local de rutas.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 - En SSR/SSG donde el title ya se genera en HTML inicial.
 - Si usas un framework que gestiona metadata por ruta.
@@ -255,19 +255,19 @@ Asigna `document.title`.
 
 ## `upsertMeta(selector, attributes, documentRef)`
 
-### Que hace
+### Qué hace
 
 Busca un `<meta>` por selector. Si existe, actualiza atributos; si no existe, crea uno y lo agrega al `head`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 - Para `description`, Open Graph, Twitter Cards o robots en SPAs.
 - Para reemplazar helpers locales repetidos de metadata client-side.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
-- Para metadata especifica del proyecto dentro de foundation.
-- Para transformar HTML estatico; usa `applyHtmlMetadata`.
+- Para metadata específica del proyecto dentro de foundation.
+- Para transformar HTML estático; usa `applyHtmlMetadata`.
 
 ### Parametros
 
@@ -290,7 +290,7 @@ upsertMeta('meta[name="description"]', {
 
 ## `upsertCanonical(href, documentRef)`
 
-### Que hace
+### Qué hace
 
 Crea o actualiza `<link rel="canonical">`.
 
@@ -305,7 +305,7 @@ Crea o actualiza `<link rel="canonical">`.
 
 ## `upsertAlternate(hreflang, href, documentRef)`
 
-### Que hace
+### Qué hace
 
 Crea o actualiza `<link rel="alternate" hreflang="...">`.
 
@@ -328,6 +328,6 @@ upsertAlternate('es', spanishUrl);
 upsertAlternate('en', englishUrl);
 ```
 
-## Uso en produccion
+## Uso en producción
 
-Estos helpers se usan como capa compartida para metadata client-side en proyectos donde el contenido especifico vive localmente.
+Estos helpers se usan como capa compartida para metadata client-side en proyectos donde el contenido específico vive localmente.

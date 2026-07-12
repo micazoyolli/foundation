@@ -1,18 +1,18 @@
 # SCSS: Mixins
 
-Foundation expone mixins pequenos para responsive y motion. No incluyen estilos visuales.
+Foundation expone mixins pequeños para responsive y motion. No incluyen estilos visuales.
 
 ## `down($breakpoint)`
 
-### Que hace
+### Qué hace
 
 Genera `@media (max-width: $breakpoint)`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 Para ajustes mobile/tablet donde el layout cambia por debajo de un ancho.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 Cuando el componente deberia responder al tamano de su contenedor.
 
@@ -34,21 +34,21 @@ Un media query con el bloque `@content`.
 
 ## `up($breakpoint)`
 
-### Que hace
+### Qué hace
 
 Genera `@media (min-width: $breakpoint)`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 Para progressive enhancement desde mobile hacia desktop.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 Cuando un estilo base simple ya resuelve el caso sin media query.
 
 ### Parametros
 
-- `$breakpoint`: ancho minimo CSS.
+- `$breakpoint`: ancho mínimo CSS.
 
 ### Valor de retorno
 
@@ -64,21 +64,21 @@ Un media query con el bloque `@content`.
 
 ## `between($min-breakpoint, $max-breakpoint)`
 
-### Que hace
+### Qué hace
 
 Genera un media query entre dos anchos.
 
-### Cuando usarlo
+### Cuándo usarlo
 
-Para ajustes especificos de tablet o rangos intermedios.
+Para ajustes específicos de tablet o rangos intermedios.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 Cuando se puede resolver con estilos fluidos, `clamp()` o grid responsive.
 
 ### Parametros
 
-- `$min-breakpoint`: ancho minimo.
+- `$min-breakpoint`: ancho mínimo.
 - `$max-breakpoint`: ancho maximo.
 
 ### Valor de retorno
@@ -97,6 +97,6 @@ Un media query con el bloque `@content`.
 
 Documentado en [motion](./motion.md).
 
-## Uso en produccion
+## Uso en producción
 
-Foundation se utiliza como base compartida en sitios de produccion, aplicaciones de negocio y experiencias interactivas.
+Foundation se utiliza como base compartida en sitios de producción, aplicaciones de negocio y experiencias interactivas.

@@ -22,17 +22,17 @@ Los tokens de motion definen duraciones, easings y un mixin para `prefers-reduce
 }
 ```
 
-### Que hace
+### Qué hace
 
 Envuelve reglas dentro de `@media (prefers-reduced-motion: reduce)`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 - En animaciones decorativas.
 - En transiciones largas.
 - En efectos de entrada, parallax o desplazamientos.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 - Para ocultar cambios de estado importantes.
 - Para eliminar feedback esencial sin alternativa.
@@ -40,7 +40,7 @@ Envuelve reglas dentro de `@media (prefers-reduced-motion: reduce)`.
 
 ### Parametros
 
-No recibe parametros. Usa `@content`.
+No recibe parámetros. Usa `@content`.
 
 ### Valor de retorno
 

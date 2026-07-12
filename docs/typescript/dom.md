@@ -4,19 +4,19 @@ Estos helpers ayudan a trabajar con eventos DOM sin casts inseguros y con patron
 
 ## `isElement(target)`
 
-### Que hace
+### Qué hace
 
 Verifica si un `EventTarget | null` es una instancia de `Element`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 - Antes de usar `.closest()`.
 - En handlers globales de eventos.
-- En logica de proteccion selectiva de media.
+- En logica de protección selectiva de media.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
-- Si ya tienes un tipo DOM especifico garantizado por React o TypeScript.
+- Si ya tienes un tipo DOM específico garantizado por React o TypeScript.
 - Para validar datos de negocio.
 
 ### Parametros
@@ -40,15 +40,15 @@ document.addEventListener('click', (event) => {
 
 ## `isHTMLElement(target)`
 
-### Que hace
+### Qué hace
 
 Verifica si un target es `HTMLElement`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 Cuando necesitas propiedades como `dataset`, `focus()` o medidas del elemento.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 Si el target puede ser SVG y necesitas conservar ese caso.
 
@@ -62,17 +62,17 @@ Si el target puede ser SVG y necesitas conservar ese caso.
 
 ## `KEYBOARD_KEYS`
 
-### Que hace
+### Qué hace
 
-Centraliza teclas comunes: `enter`, `space` y `escape`.
+Centraliza teclascomúnes: `enter`, `space` y `escape`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 En handlers compartidos donde se repiten esos valores.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
-Para atajos complejos o mapas de teclado especificos de una app.
+Para atajos complejos o mapas de teclado específicos de una app.
 
 ### Valor de retorno
 
@@ -80,9 +80,9 @@ Objeto constante.
 
 ## `isKeyboardActivation(event)`
 
-### Que hace
+### Qué hace
 
-Detecta activacion por `Enter` o `Space`.
+Detecta activación por `Enter` o `Space`.
 
 ### Parametros
 
@@ -106,21 +106,21 @@ function onKeyDown(event: KeyboardEvent) {
 
 ## `PROTECTED_MEDIA_SELECTOR`
 
-### Que hace
+### Qué hace
 
-Selector comun para media protegible: `img`, `svg`, `canvas`, `video` y `[data-protected-media]`.
+Selectorcomún para media protegible: `img`, `svg`, `canvas`, `video` y `[data-protected-media]`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
-En proteccion selectiva de contenido visual.
+En protección selectiva de contenido visual.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
-Para bloquear toda la pagina o impedir accesibilidad global.
+Para bloquear toda la página o impedir accesibilidad global.
 
 ## `isProtectedMediaTarget(target)`
 
-### Que hace
+### Qué hace
 
 Detecta si el target o un ancestro coincide con `PROTECTED_MEDIA_SELECTOR`.
 
@@ -144,27 +144,27 @@ document.addEventListener('contextmenu', (event) => {
 });
 ```
 
-## Uso en produccion
+## Uso en producción
 
-Foundation se utiliza como base compartida en sitios de produccion, aplicaciones de negocio y experiencias interactivas. Puedes conocer mas del ecosistema en [nadia.dev](https://nadia.dev).
+Foundation se utiliza como base compartida en sitios de producción, aplicaciones de negocio y experiencias interactivas. Puedes conocer más del ecosistema en [nadia.dev](https://nadia.dev).
 
 ## `getFocusableElements(container)`
 
-### Que hace
+### Qué hace
 
-Devuelve los elementos enfocables dentro de un contenedor usando un selector DOM comun y filtrando elementos deshabilitados, `aria-hidden="true"` y `tabIndex="-1"`.
+Devuelve los elementos enfocables dentro de un contenedor usando un selector DOMcomún y filtrando elementos deshabilitados, `aria-hidden="true"` y `tabIndex="-1"`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
-- En drawers, modales y paneles con navegacion por teclado.
+- En drawers, modales y paneles con navegación por teclado.
 - Antes de implementar un focus trap local.
 - Cuando se necesita una lista sencilla de elementos enfocables sin traer dependencias.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 - Para widgets complejos como comboboxes avanzados.
 - Si necesitas una estrategia completa de inert/focus management.
-- Si el componente ya delega esto a una libreria accesible madura.
+- Si el componente ya delega esto a una librería accesible madura.
 
 ### Parametros
 
@@ -185,19 +185,19 @@ first?.focus();
 
 ## `lockBodyScroll(documentRef)` y `unlockBodyScroll(lock)`
 
-### Que hacen
+### Qué hacen
 
-`lockBodyScroll` guarda el `overflow` actual del `body`, lo cambia a `hidden` y devuelve un token de restauracion. `unlockBodyScroll` restaura el valor anterior.
+`lockBodyScroll` guarda el `overflow` actual del `body`, lo cambia a `hidden` y devuelve un token de restauración. `unlockBodyScroll` restaura el valor anterior.
 
-### Cuando usarlos
+### Cuándo usarlos
 
 - En modales, drawers y menus que deben impedir scroll del fondo.
 - Cuando se necesita restaurar exactamente el overflow previo.
 
-### Cuando NO usarlos
+### Cuándo no usarlos
 
-- Si el scroll lock requiere compensar scrollbar o manejar multiples locks anidados.
-- Si una libreria de overlay ya controla el scroll.
+- Si el scroll lock requiere compensar scrollbar o manejar múltiples locks anidados.
+- Si una librería de overlay ya controla el scroll.
 
 ### Parametros
 
@@ -222,26 +222,26 @@ unlockBodyScroll(lock);
 <div class="visual-card overlay-demo">
   <div class="overlay-demo-panel">
     <strong>Panel accesible</strong>
-    <p>El patron conserva foco, bloquea scroll del fondo y permite Escape.</p>
+    <p>El patrón conserva foco, bloquea scroll del fondo y permite Escape.</p>
     <button class="focus-demo">Cerrar</button>
   </div>
 </div>
 
 ## `restoreFocus(element, documentRef)`
 
-### Que hace
+### Qué hace
 
-Regresa el foco a un elemento si todavia existe dentro de `document.body`.
+Regresa el foco a un elemento si todavía existe dentro de `document.body`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 - Al cerrar un modal o drawer.
-- Para devolver foco al boton que abrio una capa.
+- Para devolver foco al botón que abrió una capa.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 - Si el elemento ya no existe.
-- Si el flujo debe mover foco a otro punto por decision de UX.
+- Si el flujo debe mover foco a otro punto por decisión de UX.
 
 ### Parametros
 
@@ -254,18 +254,18 @@ Regresa el foco a un elemento si todavia existe dentro de `document.body`.
 
 ## `trapTabKey(event, container, activeElement)`
 
-### Que hace
+### Qué hace
 
 Intercepta `Tab` en los extremos de un contenedor y mueve el foco del ultimo al primero o del primero al ultimo.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 - En overlays simples.
 - En drawers o modales propios con una superficie enfocada.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
-- En dialogs complejos donde conviene una libreria especializada.
+- En dialogs complejos donde conviene una librería especializada.
 - Si hay focus scopes anidados.
 
 ### Parametros
@@ -288,18 +288,18 @@ window.addEventListener('keydown', (event) => {
 
 ## `createEscapeKeyHandler(onEscape)`
 
-### Que hace
+### Qué hace
 
 Devuelve un handler que ejecuta `onEscape` cuando `event.key` es `Escape`.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 - En overlays simples.
 - Para evitar repetir comparaciones de tecla.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
-- Si el cierre depende de estado complejo o atajos multiples.
+- Si el cierre depende de estado complejo o atajos múltiples.
 
 ### Parametros
 
@@ -309,6 +309,6 @@ Devuelve un handler que ejecuta `onEscape` cuando `event.key` es `Escape`.
 
 `(event: Pick<KeyboardEvent, 'key'>) => void`
 
-## Uso en produccion
+## Uso en producción
 
 Estas primitivas sostienen patrones de overlays, drawers y modales en experiencias reales sin mover la UI ni las reglas de marca a Foundation.

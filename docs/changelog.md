@@ -4,8 +4,8 @@ Este changelog resume cambios relevantes del paquete. Para cambios detallados, r
 
 ## 0.3.1
 
-- Refina la documentacion navegable y README para npm.
-- Mejora legibilidad de codigo, hero, footer y ejemplos integrados.
+- Refina la documentación navegable y README para npm.
+- Mejora legibilidad de código, hero, footer y ejemplos integrados.
 - No cambia exports ni comportamiento runtime.
 
 ## 0.3.0
@@ -29,29 +29,29 @@ Este changelog resume cambios relevantes del paquete. Para cambios detallados, r
 
 - Agrega helpers SEO/build puros:
   - escaping HTML/XML;
-  - normalizacion de canonical;
-  - generacion de sitemap XML;
+  - normalización de canonical;
+  - generación de sitemap XML;
   - reemplazo de metadata en HTML;
-  - output path para HTML estatico por ruta.
+  - output path para HTML estático por ruta.
 - Ajusta la salida TypeScript para consumo desde scripts Node ESM.
 - Mantiene el paquete sin React y sin datos de marca.
 
 ## 0.1.2
 
-- Publicacion npm publica.
+- Publicación npm pública.
 - Ajustes de licencia y metadatos del paquete.
 
 ## 0.1.0
 
-- Primera version de fundamentos no visuales.
+- Primera versión de fundamentos no visuales.
 - Tokens SCSS base.
 - Breakpoints y mixins responsive.
 - `cx`.
-- Guards TypeScript pequenos.
-- Utilidades basicas de DOM, teclado y media protegida.
+- Guards TypeScript pequeños.
+- Utilidades básicas de DOM, teclado y media protegida.
 
-## Politica de cambios
+## Política de cambios
 
-- Nuevos helpers compatibles: version minor.
-- Correcciones internas o documentacion: version patch.
-- Cambios incompatibles en API: version major.
+- Nuevos helpers compatibles: versión minor.
+- Correcciones internas o documentación: versión patch.
+- Cambios incompatibles en API: versión major.

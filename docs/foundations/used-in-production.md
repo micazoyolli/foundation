@@ -1,17 +1,17 @@
-# Usado en produccion
+# Usado en producción
 
-Foundation se utiliza como base compartida en sitios de produccion, aplicaciones de negocio y experiencias interactivas.
+Foundation se utiliza como base compartida en sitios de producción, aplicaciones de negocio y experiencias interactivas.
 
-No guarda nombres de proyectos, rutas privadas, dominios internos ni detalles de implementacion especificos. Su rol es sostener la capa comun: tokens base, helpers no visuales, accesibilidad DOM y utilidades SEO/build.
+No guarda nombres de proyectos, rutas privadas, dominios internos ni detalles de implementación específicos. Su rol es sostener la capa común: tokens base, helpers no visuales, accesibilidad DOM y utilidades SEO/build.
 
-## Como conocer el ecosistema
+## Cómo conocer el ecosistema
 
-Puedes ver mas del trabajo publico alrededor de este ecosistema en [nadia.dev](https://nadia.dev).
+Puedes ver más del trabajo público alrededor de este ecosistema en [nadia.dev](https://nadia.dev).
 
-## Que se mantiene local en cada proyecto
+## Qué se mantiene local en cada proyecto
 
-- Marca, paleta y tipografia final.
+- Marca, paleta y tipografía final.
 - Componentes visuales.
-- Contenido, rutas y metadata especifica.
+- Contenido, rutas y metadata específica.
 - Assets, favicons y manifest icons.
 - Reglas de negocio.

@@ -2,21 +2,21 @@
 
 ## `cx(...classes)`
 
-### Que hace
+### Qué hace
 
 Compone clases CSS filtrando valores falsy.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 - Para clases condicionales simples.
 - Para evitar arrays manuales con `.filter(Boolean).join(' ')`.
 - En proyectos donde no se quiere agregar una dependencia como `clsx`.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 - Si necesitas objetos `{ active: true }`.
-- Si necesitas deduplicacion de clases Tailwind.
-- Si la expresion se vuelve dificil de leer.
+- Si necesitas deduplicación de clases Tailwind.
+- Si la expresión se vuelve difícil de leer.
 
 ### Parametros
 
@@ -48,19 +48,19 @@ type ClassValue = string | false | null | undefined;
 
 ## `isNonEmptyString(value)`
 
-### Que hace
+### Qué hace
 
 Verifica que un valor sea string y que `trim()` tenga contenido.
 
-### Cuando usarlo
+### Cuándo usarlo
 
 - Para validar valores opcionales simples.
 - Antes de construir atributos o rutas con strings externos.
 
-### Cuando NO usarlo
+### Cuándo no usarlo
 
 - Para validar formularios complejos.
-- Para validaciones con mensajes de error de usuario.
+- Para validaciónes con mensajes de error de usuario.
 - Para normalizar contenido con reglas de negocio.
 
 ### Parametros
@@ -81,6 +81,6 @@ function getLabel(value: unknown) {
 }
 ```
 
-## Uso en produccion
+## Uso en producción
 
-Foundation se utiliza como base compartida en sitios de produccion, aplicaciones de negocio y experiencias interactivas.
+Foundation se utiliza como base compartida en sitios de producción, aplicaciones de negocio y experiencias interactivas.

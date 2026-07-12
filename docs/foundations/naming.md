@@ -1,10 +1,10 @@
 # Convenciones de naming
 
-Estas convenciones ayudan a mantener el ecosistema consistente sin convertir foundation en una libreria visual.
+Estas convenciones ayudan a mantener el ecosistema consistente sin convertir foundation en una librería visual.
 
 ## Tokens
 
-Usar nombres semanticos de escala, no de marca.
+Usar nombres semánticos de escala, no de marca.
 
 Correcto:
 
@@ -23,7 +23,7 @@ $pocoyo-card-radius: 16px;
 
 ## Helpers
 
-Usar verbos claros para acciones y prefijos especificos cuando el dominio lo requiere.
+Usar verbos claros para acciones y prefijos específicos cuando el dominio lo requiere.
 
 Correcto:
 
@@ -52,10 +52,10 @@ Foundation no exporta clases CSS globales. En proyectos consumidores, preferir c
 
 ## Atomic UI futuro
 
-La seccion futura de Atomic UI debe usar nombres por nivel solo si algun dia existen piezas visuales aprobadas:
+La sección futura de Atomic UI debe usar nombres por nivel solo si algún día existen piezas visuales aprobadas:
 
-- atomos: `Button`, `IconButton`, `TextInput`;
-- moleculas: `SearchField`, `ProductCard`, `InviteSummary`;
+- átomos: `Button`, `IconButton`, `TextInput`;
+- moléculas: `SearchField`, `ProductCard`, `InviteSummary`;
 - organismos: `Header`, `Sidebar`, `ProductGrid`.
 
 Por ahora esos nombres son convenciones reservadas, no APIs existentes.

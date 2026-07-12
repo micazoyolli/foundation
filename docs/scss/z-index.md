@@ -1,13 +1,13 @@
 # SCSS: Z-index
 
-La escala de z-index evita numeros magicos en capas comunes como headers, overlays, modales y toasts.
+La escala de z-index evita números mágicos en capascomúnes como headers, overlays, modales y toasts.
 
 | Token | Valor | Uso esperado |
 | --- | --- | --- |
 | `$z-base` | `0` | Capa normal |
 | `$z-raised` | `1` | Elementos elevados locales |
 | `$z-sticky` | `10` | Sticky dentro de layout |
-| `$z-header` | `100` | Headers o navegacion fija |
+| `$z-header` | `100` | Headers o navegación fija |
 | `$z-overlay` | `1000` | Backdrops y overlays |
 | `$z-modal` | `1100` | Modales y drawers |
 | `$z-toast` | `1200` | Mensajes temporales |
@@ -41,7 +41,7 @@ La escala de z-index evita numeros magicos en capas comunes como headers, overla
 
 ## Cuándo usarlo
 
-- Cuando la capa es comun y semantica.
+- Cuando la capa escomún y semántica.
 - Cuando quieres evitar `999999`.
 - Cuando el componente no vive dentro de un stacking context especial.
 
