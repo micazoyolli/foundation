@@ -32,8 +32,6 @@ features:
     link: /typescript/seo
 ---
 
-<p class="foundation-kicker">@micazoyolli/foundation</p>
-
 ## Qué es Foundation
 
 `@micazoyolli/foundation` es la base compartida para construir el ecosistema con una misma filosofía técnica: piezas pequeñas, agnósticas a marca y extraidas de necesidades reales.
