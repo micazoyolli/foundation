@@ -281,12 +281,26 @@ a {
   box-sizing: border-box;
   margin-inline: auto;
   max-width: 72rem;
-  padding-inline: foundation.$space-5;
 }
 
 .VPHome > div[style*='position: relative'],
 .VPHome > div[style*='position:relative'] {
-  margin-top: foundation.$space-8;
+  margin-top: foundation.$space-6;
+  padding-inline: foundation.$space-5;
+}
+
+@include foundation.up(foundation.$breakpoint-md) {
+  .VPHome > div[style*='position: relative'],
+  .VPHome > div[style*='position:relative'] {
+    padding-inline: foundation.$space-7;
+  }
+}
+
+@include foundation.up(foundation.$breakpoint-lg) {
+  .VPHome > div[style*='position: relative'],
+  .VPHome > div[style*='position:relative'] {
+    padding-inline: foundation.$space-8;
+  }
 }
 
 .VPHome .foundation-kicker {
@@ -799,7 +813,7 @@ a {
 
   .VPHome > div[style*='position: relative'] > div,
   .VPHome > div[style*='position:relative'] > div {
-    padding-inline: foundation.$space-4;
+    max-width: 72rem;
   }
 
   .VPNavBarTitle {
