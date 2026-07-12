@@ -63,6 +63,11 @@ body {
     var(--vp-c-bg);
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;
@@ -83,11 +88,21 @@ a {
   backdrop-filter: blur(14px);
 }
 
+.VPNavBar,
+.VPNavBar .container,
+.VPNavBar .content,
+.VPNavBar .content-body {
+  min-width: 0;
+}
+
 .VPNavBarTitle .title {
   color: var(--vp-c-text-1);
   font-family: 'Barriecito', var(--vp-font-family-base);
   font-size: 1.05rem;
   letter-spacing: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .VPNavBarMenuLink,
@@ -216,6 +231,15 @@ a {
   width: 100%;
 }
 
+.vp-doc [class*='language-'],
+.vp-doc .custom-block,
+.vp-doc .visual-card,
+.vp-doc .foundation-card,
+.vp-doc .principle-card,
+.vp-doc .production-card {
+  max-width: 100%;
+}
+
 .vp-doc div[class*='language-'] {
   --shiki-light: #f8f2fb;
   --shiki-dark: #f8f2fb;
@@ -225,6 +249,11 @@ a {
   border: 1px solid rgba(30, 33, 74, 0.12);
   border-radius: 12px;
   box-shadow: 0 18px 48px rgba(6, 10, 52, 0.14);
+  margin-inline: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
 }
 
 .dark .vp-doc div[class*='language-'] {
@@ -238,7 +267,23 @@ a {
 }
 
 .vp-doc div[class*='language-'] code,
-.vp-doc div[class*='language-'] pre,
+.vp-doc div[class*='language-'] pre {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.vp-doc div[class*='language-'] pre {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+}
+
+.vp-doc div[class*='language-'] code {
+  display: inline-block;
+  min-width: 100%;
+  width: max-content;
+}
+
 .vp-doc div[class*='language-'] span {
   color: #f8f2fb !important;
 }
@@ -282,11 +327,16 @@ a {
 
 .vp-doc div[class*='language-'] .lang {
   color: #dddffb;
+  max-width: calc(100% - 4.5rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .vp-doc div[class*='language-'] .copy {
   border-color: rgba(221, 223, 251, 0.24);
   opacity: 1;
+  right: 0.75rem;
 }
 
 .vp-doc div[class*='language-'] .copy:hover,
@@ -487,6 +537,7 @@ a {
   align-items: center;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .protected-media-thumb {
@@ -561,12 +612,61 @@ a {
 }
 
 @media (max-width: 768px) {
+  .VPNavBarTitle {
+    min-width: 0;
+    max-width: min(34vw, 10rem);
+  }
+
+  .VPNavBarTitle .title {
+    font-size: 0.9rem;
+  }
+
+  .VPNavBarSearch,
+  .VPNavBarTranslations,
+  .VPSwitchAppearance,
+  .VPNavBarHamburger {
+    flex-shrink: 0;
+  }
+
   .VPHero::before {
     left: 1.5rem;
   }
 
+  .VPHero .name {
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
+    overflow-wrap: anywhere;
+  }
+
+  .VPHero .text {
+    font-size: clamp(1.45rem, 7.5vw, 2.35rem);
+    overflow-wrap: anywhere;
+  }
+
+  .vp-doc h1 {
+    gap: 0.15rem 0.35rem;
+    overflow-wrap: anywhere;
+  }
+
+  .vp-doc h1::before,
+  .vp-doc h1::after {
+    font-size: 0.8rem;
+  }
+
   .vp-doc table {
     display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .vp-doc div[class*='language-'] {
+    border-radius: 10px;
+    margin-inline: 0;
+  }
+
+  .vp-doc div[class*='language-'] pre {
+    padding-right: 3.75rem;
+    -webkit-overflow-scrolling: touch;
   }
 
   .breakpoint-labels {
@@ -576,5 +676,32 @@ a {
 
   .z-scale-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 390px) {
+  .VPNavBarTitle {
+    max-width: 6.75rem;
+  }
+
+  .VPNavBarTranslations .text {
+    padding-inline: 0.5rem;
+  }
+
+  .foundation-grid,
+  .visual-grid,
+  .principle-grid,
+  .production-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .VPNavBarTitle {
+    max-width: 5.75rem;
+  }
+
+  .VPNavBarTitle .title {
+    font-size: 0.8rem;
   }
 }
