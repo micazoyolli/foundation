@@ -496,7 +496,7 @@ a {
   max-width: calc(100% - 4.5rem);
   overflow: hidden;
   position: absolute;
-  right: foundation.$space-3;
+  right: foundation.$space-7;
   text-overflow: ellipsis;
   top: foundation.$space-1;
   white-space: nowrap;
@@ -514,30 +514,15 @@ a {
   border-radius: foundation.$radius-sm;
   cursor: pointer;
   height: 2rem;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   right: foundation.$space-2;
   top: foundation.$space-2;
   transition:
     background-color 150ms ease,
-    border-color 150ms ease,
-    opacity 150ms ease;
+    border-color 150ms ease;
   width: 2rem;
   z-index: 3;
-}
-
-.vp-doc [class*='language-']:hover > button.copy,
-.vp-doc [class*='language-'] > button.copy:focus,
-.VPHome [class*='language-']:hover > button.copy,
-.VPHome [class*='language-'] > button.copy:focus {
-  opacity: 1;
-}
-
-.vp-doc [class*='language-']:hover > button.copy + span.lang,
-.vp-doc [class*='language-'] > button.copy:focus + span.lang,
-.VPHome [class*='language-']:hover > button.copy + span.lang,
-.VPHome [class*='language-'] > button.copy:focus + span.lang {
-  opacity: 0;
 }
 
 .vp-doc [class*='language-'] > button.copy:hover,
