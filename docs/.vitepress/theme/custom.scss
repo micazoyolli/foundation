@@ -434,7 +434,7 @@ a {
   overflow-x: auto;
   overflow-y: hidden;
   overscroll-behavior-inline: contain;
-  padding: foundation.$space-5 0;
+  padding: foundation.$space-9 0 foundation.$space-5;
   position: relative;
   z-index: 1;
 }
@@ -496,10 +496,11 @@ a {
   max-width: calc(100% - 4.5rem);
   overflow: hidden;
   position: absolute;
-  right: foundation.$space-3;
-  text-align: right;
+  left: foundation.$space-6;
+  right: foundation.$space-8;
+  text-align: left;
   text-overflow: ellipsis;
-  top: foundation.$space-2;
+  top: foundation.$space-3;
   white-space: nowrap;
   z-index: 2;
 }
@@ -525,7 +526,7 @@ a {
   opacity: 1;
   position: absolute;
   right: foundation.$space-3;
-  top: foundation.$space-6;
+  top: foundation.$space-2;
   transition:
     background-color 150ms ease,
     border-color 150ms ease;
@@ -893,13 +894,18 @@ a {
 
   .vp-doc [class*='language-'] pre,
   .VPHome [class*='language-'] pre {
-    padding-right: 3.75rem;
     -webkit-overflow-scrolling: touch;
   }
 
   .vp-doc [class*='language-'] code,
   .VPHome [class*='language-'] code {
     padding-inline: foundation.$space-4;
+  }
+
+  .vp-doc [class*='language-'] > span.lang,
+  .VPHome [class*='language-'] > span.lang {
+    left: foundation.$space-4;
+    right: foundation.$space-8;
   }
 
   .breakpoint-labels {
