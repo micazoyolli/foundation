@@ -3,6 +3,8 @@ import test from 'node:test';
 import {
   createEscapeKeyHandler,
   getFocusableElements,
+  isElement,
+  isHTMLElement,
   lockBodyScroll,
   restoreFocus,
   trapTabKey,
@@ -32,6 +34,11 @@ test('filters focusable elements', () => {
   };
 
   assert.deepEqual(getFocusableElements(container), [enabled]);
+});
+
+test('DOM target guards are safe without browser globals', () => {
+  assert.equal(isElement({}), false);
+  assert.equal(isHTMLElement({}), false);
 });
 
 test('locks and unlocks body scroll', () => {

@@ -4,23 +4,31 @@ export type MetaAttributes = {
   property?: string;
 };
 
+const getDocumentRef = (documentRef?: Document) => {
+  if (documentRef) return documentRef;
+  if (typeof document !== 'undefined') return document;
+
+  throw new ReferenceError('A document reference is required outside the browser.');
+};
+
 export const updateDocumentTitle = (
   title: string,
-  documentRef: Document = document,
+  documentRef?: Document,
 ) => {
-  documentRef.title = title;
+  getDocumentRef(documentRef).title = title;
 };
 
 export const upsertMeta = (
   selector: string,
   attributes: MetaAttributes,
-  documentRef: Document = document,
+  documentRef?: Document,
 ) => {
-  let element = documentRef.head.querySelector<HTMLMetaElement>(selector);
+  const currentDocument = getDocumentRef(documentRef);
+  let element = currentDocument.head.querySelector<HTMLMetaElement>(selector);
 
   if (!element) {
-    element = documentRef.createElement('meta');
-    documentRef.head.appendChild(element);
+    element = currentDocument.createElement('meta');
+    currentDocument.head.appendChild(element);
   }
 
   Object.entries(attributes).forEach(([name, value]) => {
@@ -32,14 +40,15 @@ export const upsertMeta = (
 
 export const upsertCanonical = (
   href: string,
-  documentRef: Document = document,
+  documentRef?: Document,
 ) => {
-  let element = documentRef.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+  const currentDocument = getDocumentRef(documentRef);
+  let element = currentDocument.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
 
   if (!element) {
-    element = documentRef.createElement('link');
+    element = currentDocument.createElement('link');
     element.rel = 'canonical';
-    documentRef.head.appendChild(element);
+    currentDocument.head.appendChild(element);
   }
 
   element.href = href;
@@ -50,17 +59,18 @@ export const upsertCanonical = (
 export const upsertAlternate = (
   hreflang: string,
   href: string,
-  documentRef: Document = document,
+  documentRef?: Document,
 ) => {
-  let element = documentRef.head.querySelector<HTMLLinkElement>(
+  const currentDocument = getDocumentRef(documentRef);
+  let element = currentDocument.head.querySelector<HTMLLinkElement>(
     `link[rel="alternate"][hreflang="${hreflang}"]`,
   );
 
   if (!element) {
-    element = documentRef.createElement('link');
+    element = currentDocument.createElement('link');
     element.rel = 'alternate';
     element.hreflang = hreflang;
-    documentRef.head.appendChild(element);
+    currentDocument.head.appendChild(element);
   }
 
   element.href = href;

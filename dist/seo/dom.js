@@ -1,34 +1,44 @@
-export const updateDocumentTitle = (title, documentRef = document) => {
-    documentRef.title = title;
+const getDocumentRef = (documentRef) => {
+    if (documentRef)
+        return documentRef;
+    if (typeof document !== 'undefined')
+        return document;
+    throw new ReferenceError('A document reference is required outside the browser.');
 };
-export const upsertMeta = (selector, attributes, documentRef = document) => {
-    let element = documentRef.head.querySelector(selector);
+export const updateDocumentTitle = (title, documentRef) => {
+    getDocumentRef(documentRef).title = title;
+};
+export const upsertMeta = (selector, attributes, documentRef) => {
+    const currentDocument = getDocumentRef(documentRef);
+    let element = currentDocument.head.querySelector(selector);
     if (!element) {
-        element = documentRef.createElement('meta');
-        documentRef.head.appendChild(element);
+        element = currentDocument.createElement('meta');
+        currentDocument.head.appendChild(element);
     }
     Object.entries(attributes).forEach(([name, value]) => {
         element?.setAttribute(name, value);
     });
     return element;
 };
-export const upsertCanonical = (href, documentRef = document) => {
-    let element = documentRef.head.querySelector('link[rel="canonical"]');
+export const upsertCanonical = (href, documentRef) => {
+    const currentDocument = getDocumentRef(documentRef);
+    let element = currentDocument.head.querySelector('link[rel="canonical"]');
     if (!element) {
-        element = documentRef.createElement('link');
+        element = currentDocument.createElement('link');
         element.rel = 'canonical';
-        documentRef.head.appendChild(element);
+        currentDocument.head.appendChild(element);
     }
     element.href = href;
     return element;
 };
-export const upsertAlternate = (hreflang, href, documentRef = document) => {
-    let element = documentRef.head.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
+export const upsertAlternate = (hreflang, href, documentRef) => {
+    const currentDocument = getDocumentRef(documentRef);
+    let element = currentDocument.head.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
     if (!element) {
-        element = documentRef.createElement('link');
+        element = currentDocument.createElement('link');
         element.rel = 'alternate';
         element.hreflang = hreflang;
-        documentRef.head.appendChild(element);
+        currentDocument.head.appendChild(element);
     }
     element.href = href;
     return element;

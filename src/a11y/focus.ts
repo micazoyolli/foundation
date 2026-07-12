@@ -18,6 +18,16 @@ type FocusableElement = HTMLElement & {
   disabled?: boolean;
 };
 
+const getDocumentRef = (documentRef?: Document) => {
+  if (documentRef) return documentRef;
+  if (typeof document !== 'undefined') return document;
+
+  throw new ReferenceError('A document reference is required outside the browser.');
+};
+
+const getActiveElement = () =>
+  typeof document !== 'undefined' ? document.activeElement : undefined;
+
 const canReceiveFocus = (element: FocusableElement) =>
   !element.disabled
   && element.getAttribute('aria-hidden') !== 'true'
@@ -30,13 +40,14 @@ export const getFocusableElements = (
 ).filter(canReceiveFocus);
 
 export const lockBodyScroll = (
-  documentRef: Document = document,
+  documentRef?: Document,
 ): BodyScrollLock => {
-  const previousOverflow = documentRef.body.style.overflow;
-  documentRef.body.style.overflow = 'hidden';
+  const currentDocument = getDocumentRef(documentRef);
+  const previousOverflow = currentDocument.body.style.overflow;
+  currentDocument.body.style.overflow = 'hidden';
 
   return {
-    document: documentRef,
+    document: currentDocument,
     previousOverflow,
   };
 };
@@ -47,9 +58,11 @@ export const unlockBodyScroll = (lock: BodyScrollLock) => {
 
 export const restoreFocus = (
   element: Element | null | undefined,
-  documentRef: Document = document,
+  documentRef?: Document,
 ) => {
-  if (!element || !documentRef.body.contains(element)) return;
+  const currentDocument = getDocumentRef(documentRef);
+
+  if (!element || !currentDocument.body.contains(element)) return;
 
   const focusable = element as HTMLElement;
 
@@ -61,7 +74,7 @@ export const restoreFocus = (
 export const trapTabKey = (
   event: Pick<KeyboardEvent, 'key' | 'shiftKey' | 'preventDefault'>,
   container: Pick<ParentNode, 'querySelectorAll'>,
-  activeElement: Element | null | undefined = document.activeElement,
+  activeElement: Element | null | undefined = getActiveElement(),
 ) => {
   if (event.key !== 'Tab') return false;
 

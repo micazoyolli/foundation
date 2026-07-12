@@ -4,6 +4,26 @@
   "description": "Fundamentos frontend no visuales para el ecosistema técnico de Nad.",
   "license": "MIT",
   "type": "module",
+  "homepage": "https://foundation.nadia.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micazoyolli/foundation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/micazoyolli/foundation/issues"
+  },
+  "keywords": [
+    "frontend",
+    "design-tokens",
+    "scss",
+    "accessibility",
+    "seo",
+    "typescript",
+    "vitepress"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {

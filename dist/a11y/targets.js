@@ -1,2 +1,2 @@
-export const isElement = (target) => target instanceof Element;
-export const isHTMLElement = (target) => target instanceof HTMLElement;
+export const isElement = (target) => typeof Element !== 'undefined' && target instanceof Element;
+export const isHTMLElement = (target) => typeof HTMLElement !== 'undefined' && target instanceof HTMLElement;

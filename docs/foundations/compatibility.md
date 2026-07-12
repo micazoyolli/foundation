@@ -49,3 +49,11 @@ La compatibilidad depende del tipo de helper. Foundation no requiere React.
 ## Versión de Node recomendada
 
 Para docs y builds del ecosistema se recomienda Node `24.x`.
+
+## Compatibilidad soportada
+
+- **Node:** el paquete declara soporte para Node `>=20`. Los scripts de documentación del ecosistema se validan con Node `24.x`.
+- **Módulos:** Foundation se publica como ESM. Los consumidores deben usar importación ESM o un bundler compatible.
+- **Navegadores:** los helpers DOM están pensados para navegadores modernos con soporte de APIs DOM estándar.
+- **SSR:** importar Foundation durante SSR es seguro. Los helpers que modifican `document` deben ejecutarse solo en cliente o recibir un `documentRef` explícito.
+- **Frameworks:** Foundation no depende de React, Vue, Angular, Astro ni Next.js. Cada framework decide dónde ejecutar helpers DOM/client-side.
