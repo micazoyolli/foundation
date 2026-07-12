@@ -45,7 +45,7 @@
     "build": "tsc -p tsconfig.json && yarn copy-scss",
     "clean": "rm -rf dist",
     "copy-scss": "rsync -av --include='*/' --include='*.scss' --exclude='*' src/scss/ dist/scss/",
-    "docs:build": "vitepress build docs",
+    "docs:build": "yarn build && node scripts/generate-docs-seo.mjs && vitepress build docs",
     "docs:dev": "vitepress dev docs --host 0.0.0.0",
     "docs:preview": "vitepress preview docs --host 0.0.0.0",
     "prepack": "yarn build",
