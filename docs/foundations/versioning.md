@@ -1,4 +1,4 @@
-# Versioning and updates
+# Versionado y actualizaciones
 
 Foundation usa versionado semantico.
 

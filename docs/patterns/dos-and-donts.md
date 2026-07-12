@@ -1,4 +1,4 @@
-# Correct and incorrect usage
+# Uso correcto e incorrecto
 
 ## Correcto: mover mecanica repetida
 

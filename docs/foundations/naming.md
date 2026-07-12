@@ -1,4 +1,4 @@
-# Naming conventions
+# Convenciones de naming
 
 Estas convenciones ayudan a mantener el ecosistema consistente sin convertir foundation en una libreria visual.
 

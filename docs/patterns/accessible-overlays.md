@@ -1,4 +1,4 @@
-# Accessible overlay pattern
+# Patron de overlays accesibles
 
 Las primitivas DOM de foundation ayudan a overlays simples sin acoplarse a React.
 

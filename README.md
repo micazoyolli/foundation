@@ -26,7 +26,12 @@ SCSS:
 
 ## Documentacion navegable
 
-La documentacion publica vive en `docs/` y esta preparada con VitePress para Render Static Site.
+La documentacion publica vive en `docs/` y esta preparada con VitePress para Render Static Site en `foundation.nadia.dev`.
+
+El sitio es bilingue:
+
+- Espanol: `/`
+- Ingles: `/en/`
 
 ```bash
 yarn docs:dev
@@ -46,7 +51,7 @@ Para Render:
 ### Primeros pasos
 
 - [Home](./docs/index.md)
-- [Getting Started](./docs/getting-started.md)
+- [Getting Started](./docs/getting-started/index.md)
 - [Installation](./docs/installation.md)
 - [Start a new project](./docs/getting-started/start-a-new-project.md)
 

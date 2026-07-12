@@ -1,8 +1,6 @@
-# Atomic UI future
+# Atomic UI — Futuro
 
-Foundation no incluye Atomic UI hoy.
-
-Esta seccion existe para documentar el limite futuro: si algun dia se crea una capa visual compartida, debe ser otro paquete o una extension claramente separada.
+Foundation Core no incluye componentes visuales. Esta pagina prepara el criterio para una capa futura sin crear APIs ficticias.
 
 ## Estado actual
 
@@ -13,14 +11,52 @@ Esta seccion existe para documentar el limite futuro: si algun dia se crea una c
 - No hay tokens de marca.
 - No hay tipografias finales.
 
-## Que podria existir en el futuro
+## Atoms
 
-Solo despues de validarlo en varios proyectos:
+Si algun dia existen, deberan ser piezas pequeñas, accesibles y sin marca final.
 
-- convenciones de naming para atomos, moleculas y organismos;
-- guidelines de composicion;
-- criterios de accesibilidad para componentes visuales.
+Ejemplos de nombres reservados:
 
-## Que no debe pasar
+- `Button`;
+- `IconButton`;
+- `TextInput`;
+- `VisuallyHidden`.
 
-No se deben inventar componentes visuales dentro de foundation para anticipar necesidades. La API debe nacer de patrones reales, no de especulacion.
+No existen hoy como exports.
+
+## Molecules
+
+Deberan componer atoms reales y resolver un patron probado en varios proyectos.
+
+Ejemplos de nombres reservados:
+
+- `SearchField`;
+- `MediaGuard`;
+- `MetadataPreview`.
+
+No existen hoy como exports.
+
+## Organisms
+
+Solo tendrian sentido si varios proyectos comparten estructura y comportamiento, no solo apariencia.
+
+Ejemplos de nombres reservados:
+
+- `Header`;
+- `Sidebar`;
+- `ProductGrid`.
+
+No existen hoy como exports.
+
+## Requisitos para entrar
+
+- Uso repetido en al menos varios proyectos.
+- Accesibilidad validada.
+- Props pequeñas y estables.
+- Sin tokens de marca.
+- Documentacion con ejemplo correcto/incorrecto.
+- Tests o smoke visual cuando aplique.
+
+## Por que no forma parte de Core
+
+Core debe seguir siendo agnostico a frameworks. Atomic UI probablemente viviria en otro paquete o en una extension claramente separada para no obligar a todos los consumidores a cargar React o estilos visuales.

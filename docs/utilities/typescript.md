@@ -1,4 +1,4 @@
-# TypeScript utilities
+# Utilidades TypeScript
 
 Las utilidades TypeScript son pequenas, sin framework y sin estado global.
 

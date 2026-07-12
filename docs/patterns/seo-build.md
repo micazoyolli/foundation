@@ -1,4 +1,4 @@
-# SEO build pattern
+# Patron SEO/build
 
 Foundation comparte la mecanica; cada proyecto conserva su registro de rutas y metadata.
 

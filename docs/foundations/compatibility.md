@@ -1,4 +1,4 @@
-# Compatibility matrix
+# Matriz de compatibilidad
 
 La compatibilidad depende del tipo de helper. Foundation no requiere React.
 
