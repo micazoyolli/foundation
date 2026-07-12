@@ -254,6 +254,7 @@ a {
 }
 
 .VPHero .image-src {
+  border-radius: foundation.$radius-lg;
   filter: drop-shadow(0 22px 36px rgba(6, 10, 52, 0.26));
 }
 

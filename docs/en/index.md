@@ -7,8 +7,8 @@ hero:
   text: The technical foundation behind Nad’s frontend ecosystem.
   tagline: '@micazoyolli/foundation · SCSS tokens, TypeScript helpers, DOM primitives, accessibility and SEO/build utilities for real projects.'
   image:
-    src: /foundation-mark.svg
-    alt: Foundation mark
+    src: /foundation-logo.svg
+    alt: Foundation logo
   actions:
     - theme: brand
       text: Get Started
@@ -51,7 +51,7 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
 ```
 
 <div class="foundation-grid">
-  <div class="foundation-card"><strong>Current version</strong><p><code>0.3.1</code></p></div>
+  <div class="foundation-card"><strong>Current version</strong><p><code>0.3.2</code></p></div>
   <div class="foundation-card"><strong>NPM</strong><p><a href="https://www.npmjs.com/package/@micazoyolli/foundation" target="_blank" rel="noreferrer">npmjs.com/package/@micazoyolli/foundation</a></p></div>
   <div class="foundation-card"><strong>License</strong><p><code>MIT</code></p></div>
   <div class="foundation-card"><strong>Compatibility</strong><p>SCSS, browser and Node scripts depending on the helper.</p></div>

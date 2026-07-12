@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.2
+
+- Updates the public branding for the documentation site.
+- Adds dedicated favicons, manifest icons, apple-touch-icon and Open Graph image.
+- Refines the README for GitHub and npm.
+- Does not change exports or runtime behavior.
+
 ## 0.3.1
 
 - Refines the documentation site and npm README.

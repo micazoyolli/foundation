@@ -7,8 +7,8 @@ hero:
   text: La base técnica detrás del ecosistema frontend de Nad.
   tagline: '@micazoyolli/foundation · Tokens SCSS, helpers TypeScript, primitivas DOM, accesibilidad y SEO/build para proyectos reales.'
   image:
-    src: /foundation-mark.svg
-    alt: Foundation mark
+    src: /foundation-logo.svg
+    alt: Logo de Foundation
   actions:
     - theme: brand
       text: Empezar
@@ -51,7 +51,7 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
 <div class="foundation-grid">
   <div class="foundation-card">
     <strong>Versión actual</strong>
-    <p><code>0.3.1</code></p>
+    <p><code>0.3.2</code></p>
   </div>
   <div class="foundation-card">
     <strong>NPM</strong>

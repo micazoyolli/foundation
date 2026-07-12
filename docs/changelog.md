@@ -2,6 +2,13 @@
 
 Este changelog resume cambios relevantes del paquete. Para cambios detallados, revisar los commits del repositorio.
 
+## 0.3.2
+
+- Actualiza el branding público del sitio de documentación.
+- Agrega favicons, manifest icons, apple-touch-icon y Open Graph image propios.
+- Refina el README para GitHub y npm.
+- No cambia exports ni comportamiento runtime.
+
 ## 0.3.1
 
 - Refina la documentación navegable y README para npm.

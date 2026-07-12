@@ -18,7 +18,7 @@ Foundation usa versionado semántico.
 6. Escala al siguiente proyecto solo si el cambio aporta valor.
 
 ```bash
-yarn add @micazoyolli/foundation@^0.3.1
+yarn add @micazoyolli/foundation@^0.3.2
 yarn install --frozen-lockfile
 yarn build
 yarn smoke

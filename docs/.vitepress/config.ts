@@ -4,9 +4,20 @@ import { defineConfig } from 'vitepress';
 const repo = 'https://github.com/micazoyolli/foundation';
 const npm = 'https://www.npmjs.com/package/@micazoyolli/foundation';
 const nadia = 'https://nadia.dev';
+const siteUrl = 'https://foundation.nadia.dev';
+const socialImage = `${siteUrl}/foundation-og.png`;
 const packageJson = JSON.parse(
   readFileSync(new URL('../../package.json', import.meta.url), 'utf-8'),
 ) as { version: string };
+
+const getPageUrl = (relativePath: string) => {
+  const path = relativePath
+    .replace(/(^|\/)index\.md$/, '$1')
+    .replace(/\.md$/, '')
+    .replace(/^/, '/');
+
+  return new URL(path, siteUrl).href;
+};
 
 const esNav = [
   { text: 'Inicio', link: '/' },
@@ -175,14 +186,25 @@ export default defineConfig({
   cleanUrls: true,
   description: 'Fundamentos frontend no visuales para el ecosistema técnico de Nad.',
   head: [
-    ['link', { rel: 'icon', href: '/foundation-mark.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/favicon.ico', sizes: 'any' }],
+    ['link', { rel: 'icon', href: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Barriecito&family=La+Belle+Aurore&family=Titillium+Web:wght@400;600;700&display=swap' }],
-    ['meta', { name: 'theme-color', content: '#1e214a' }],
+    ['meta', { name: 'application-name', content: '@micazoyolli/foundation' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'Foundation' }],
+    ['meta', { name: 'theme-color', content: '#242343' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: '@micazoyolli/foundation' }],
     ['meta', { property: 'og:description', content: 'The technical foundation behind Nad frontend ecosystem.' }],
+    ['meta', { property: 'og:image', content: socialImage }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: socialImage }],
   ],
   lang: 'es-MX',
   lastUpdated: true,
@@ -236,6 +258,14 @@ export default defineConfig({
       leftDelimiter: '%{',
       rightDelimiter: '}%',
     },
+  },
+  transformHead({ pageData }) {
+    const url = getPageUrl(pageData.relativePath);
+
+    return [
+      ['link', { rel: 'canonical', href: url }],
+      ['meta', { property: 'og:url', content: url }],
+    ];
   },
   themeConfig: {
     search: {
