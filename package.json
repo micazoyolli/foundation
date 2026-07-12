@@ -25,11 +25,15 @@
     "build": "tsc -p tsconfig.json && yarn copy-scss",
     "clean": "rm -rf dist",
     "copy-scss": "rsync -av --include='*/' --include='*.scss' --exclude='*' src/scss/ dist/scss/",
+    "docs:build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs --host 0.0.0.0",
+    "docs:preview": "vitepress preview docs --host 0.0.0.0",
     "prepack": "yarn build",
     "test": "yarn build && node --test tests/*.test.mjs"
   },
   "devDependencies": {
-    "typescript": "6.0.3"
+    "typescript": "6.0.3",
+    "vitepress": "^1.6.4"
   },
   "packageManager": "yarn@1.22.22"
 }

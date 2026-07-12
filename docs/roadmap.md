@@ -12,8 +12,8 @@ El roadmap prioriza consolidar `foundation` como una base estable y no visual. N
 
 ## Corto plazo
 
-1. Completar documentacion tecnica.
-2. Agregar ejemplos pequenos de consumo por entorno.
+1. Mantener la documentacion navegable alineada con la API publica.
+2. Agregar ejemplos pequenos de consumo por entorno cuando aparezcan casos reales.
 3. Identificar si `cx` necesita aceptar arrays u objetos antes de cambiarlo; por ahora no.
 4. Evaluar si las primitivas de focus necesitan ejemplos adicionales por framework.
 
@@ -30,7 +30,7 @@ El roadmap prioriza consolidar `foundation` como una base estable y no visual. N
 - Design tokens de marca.
 - Botones, cards, layouts o grids visuales.
 - SEO metadata especifica de proyectos.
-- Storybook, VitePress o sitio de documentacion.
+- Storybook.
 - Smoke harness compartido.
 - Binder de proteccion de media.
 - Dependencias UI pesadas.

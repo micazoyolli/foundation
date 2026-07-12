@@ -24,12 +24,31 @@ SCSS:
 @use '@micazoyolli/foundation/scss' as foundation;
 ```
 
-## Documentacion
+## Documentacion navegable
+
+La documentacion publica vive en `docs/` y esta preparada con VitePress para Render Static Site.
+
+```bash
+yarn docs:dev
+yarn docs:build
+yarn docs:preview
+```
+
+Para Render:
+
+- Build command: `yarn install --frozen-lockfile && yarn docs:build`
+- Publish directory: `docs/.vitepress/dist`
+- Node recomendado: `24.x`
+- Base VitePress: `/`
+
+## Documentacion Markdown
 
 ### Primeros pasos
 
+- [Home](./docs/index.md)
 - [Getting Started](./docs/getting-started.md)
 - [Installation](./docs/installation.md)
+- [Start a new project](./docs/getting-started/start-a-new-project.md)
 
 ### SCSS
 
@@ -43,6 +62,16 @@ SCSS:
 - [DOM y accesibilidad](./docs/typescript/dom.md)
 - [SEO y build](./docs/typescript/seo.md)
 - [Utils](./docs/typescript/utils.md)
+
+### Guias del ecosistema
+
+- [Filosofia y arquitectura](./docs/foundations/philosophy.md)
+- [Compatibilidad](./docs/foundations/compatibility.md)
+- [Naming conventions](./docs/foundations/naming.md)
+- [Versionado y actualizacion](./docs/foundations/versioning.md)
+- [Uso correcto e incorrecto](./docs/patterns/dos-and-donts.md)
+- [Atomic UI futuro](./docs/patterns/atomic-ui.md)
+- [Ejemplos visuales](./docs/examples/visual-examples.md)
 
 ### Proyecto
 
