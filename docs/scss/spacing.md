@@ -54,12 +54,15 @@ Valores SCSS compilados a CSS.
 }
 ```
 
-## Proyectos que ya lo usan
+## Resultado visual
 
-- TeInvitaASu Invitaciones.
-- TeInvitaASu.Party.
-- Micazoyolli.
-- Estilo Natura.
+<div class="visual-card">
+  <div class="space-demo"><span>$space-1</span><div class="space-box" style="width: 0.25rem"></div></div>
+  <div class="space-demo"><span>$space-2</span><div class="space-box" style="width: 0.5rem"></div></div>
+  <div class="space-demo"><span>$space-4</span><div class="space-box" style="width: 1rem"></div></div>
+  <div class="space-demo"><span>$space-6</span><div class="space-box" style="width: 2rem"></div></div>
+  <div class="space-demo"><span>$space-8</span><div class="space-box" style="width: 4rem"></div></div>
+</div>
 
 ## Tokens relacionados: radius
 
@@ -92,6 +95,19 @@ Los radius son parte del entrypoint SCSS y sirven para mantener radios base cons
   border-radius: foundation.$radius-md;
 }
 ```
+
+### Resultado visual
+
+<div class="visual-grid">
+  <div class="visual-card"><p><code>$radius-xs</code></p><div class="radius-sample" style="border-radius: 4px"></div></div>
+  <div class="visual-card"><p><code>$radius-md</code></p><div class="radius-sample" style="border-radius: 8px"></div></div>
+  <div class="visual-card"><p><code>$radius-xl</code></p><div class="radius-sample" style="border-radius: 16px"></div></div>
+  <div class="visual-card"><p><code>$radius-pill</code></p><div class="radius-sample" style="border-radius: 999px"></div></div>
+</div>
+
+## Compatibilidad
+
+Sass en proyectos que consumen `@micazoyolli/foundation/scss`.
 
 ## Tokens relacionados: z-index
 

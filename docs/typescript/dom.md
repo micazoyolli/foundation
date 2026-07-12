@@ -144,13 +144,9 @@ document.addEventListener('contextmenu', (event) => {
 });
 ```
 
-## Proyectos que ya los usan
+## Uso en produccion
 
-- TeInvitaASu Invitaciones: proteccion selectiva de media y controles compartidos.
-- Estilo Natura: helpers no visuales.
-- Micazoyolli: helpers no visuales.
-- OhMamaMXX: helpers no visuales.
-- TeInvitaASu.Party: helpers no visuales.
+Foundation se utiliza como base compartida en sitios de produccion, aplicaciones de negocio y experiencias interactivas. Puedes conocer mas del ecosistema en [nadia.dev](https://nadia.dev).
 
 ## `getFocusableElements(container)`
 
@@ -217,10 +213,19 @@ first?.focus();
 
 ```ts
 const lock = lockBodyScroll();
-
 // cleanup
 unlockBodyScroll(lock);
 ```
+
+### Resultado visual
+
+<div class="visual-card overlay-demo">
+  <div class="overlay-demo-panel">
+    <strong>Panel accesible</strong>
+    <p>El patron conserva foco, bloquea scroll del fondo y permite Escape.</p>
+    <button class="focus-demo">Cerrar</button>
+  </div>
+</div>
 
 ## `restoreFocus(element, documentRef)`
 
@@ -304,9 +309,6 @@ Devuelve un handler que ejecuta `onEscape` cuando `event.key` es `Escape`.
 
 `(event: Pick<KeyboardEvent, 'key'>) => void`
 
-## Proyectos que ya tienen patrones equivalentes
+## Uso en produccion
 
-- TeInvitaASu.Party: Offcanvas y ModalDemo.
-- WTFashion: Header, WishlistDrawer y filtros.
-- OhMamaMXX: EventModal.
-- TeInvitaASu Invitaciones: Sidebar.
+Estas primitivas sostienen patrones de overlays, drawers y modales en experiencias reales sin mover la UI ni las reglas de marca a Foundation.

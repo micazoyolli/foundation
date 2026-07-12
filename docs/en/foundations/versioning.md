@@ -16,7 +16,7 @@ Foundation uses semantic versioning.
 6. Move to the next project only when the change adds real value.
 
 ```bash
-yarn add @micazoyolli/foundation@^0.3.0
+yarn add @micazoyolli/foundation@^0.3.1
 yarn install --frozen-lockfile
 yarn build
 yarn smoke

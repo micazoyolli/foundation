@@ -49,5 +49,13 @@ import { isProtectedMediaTarget } from '@micazoyolli/foundation';
   <p>Protection applies to concrete media, not the whole page.</p>
 </div>
 
+## Focus visible
+
+Foundation does not export global focus styles. The consumer project must keep a visible, consistent and sufficiently contrasted focus indicator.
+
+<div class="visual-card">
+  <a class="focus-demo" href="#focus-visible">Focus me with Tab</a>
+</div>
+
 Related export:
 [src/a11y/focus.ts](https://github.com/micazoyolli/foundation/blob/main/src/a11y/focus.ts)

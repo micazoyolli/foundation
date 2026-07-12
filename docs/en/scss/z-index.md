@@ -12,10 +12,15 @@ The z-index scale avoids magic numbers for common layers.
 | `$z-modal` | `1100` | Modals and drawers |
 | `$z-toast` | `1200` | Temporary messages |
 
-<div class="visual-card z-demo">
-  <div class="z-layer base">$z-base</div>
-  <div class="z-layer overlay">$z-overlay</div>
-  <div class="z-layer modal">$z-modal</div>
+<div class="visual-card">
+  <div class="z-scale-demo">
+    <div class="z-scale-row"><span class="z-scale-chip">$z-base · 0</span><span class="z-scale-level"></span><span class="z-scale-note">base content</span></div>
+    <div class="z-scale-row"><span class="z-scale-chip">$z-raised · 1</span><span class="z-scale-level"></span><span class="z-scale-note">raised content</span></div>
+    <div class="z-scale-row"><span class="z-scale-chip">$z-header · 100</span><span class="z-scale-level"></span><span class="z-scale-note">header/sticky</span></div>
+    <div class="z-scale-row"><span class="z-scale-chip">$z-overlay · 1000</span><span class="z-scale-level"></span><span class="z-scale-note">overlay</span></div>
+    <div class="z-scale-row"><span class="z-scale-chip">$z-modal · 1100</span><span class="z-scale-level"></span><span class="z-scale-note">modal/drawer</span></div>
+    <div class="z-scale-row"><span class="z-scale-chip">$z-toast · 1200</span><span class="z-scale-level"></span><span class="z-scale-note">toast</span></div>
+  </div>
 </div>
 
 Do not use z-index tokens to hide stacking bugs without checking `position`, `transform` and `overflow`.

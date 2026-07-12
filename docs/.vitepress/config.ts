@@ -14,7 +14,7 @@ const esNav = [
   { text: 'Fundamentos', link: '/foundations/why-foundation' },
   { text: 'Utilidades', link: '/utilities/typescript' },
   { text: 'Patrones', link: '/patterns/dos-and-donts' },
-  { text: 'Ejemplos', link: '/examples/visual-examples' },
+  { text: 'Ejemplos', link: '/examples/frameworks' },
 ];
 
 const enNav = [
@@ -23,7 +23,7 @@ const enNav = [
   { text: 'Foundations', link: '/en/foundations/why-foundation' },
   { text: 'Utilities', link: '/en/utilities/typescript' },
   { text: 'Patterns', link: '/en/patterns/dos-and-donts' },
-  { text: 'Examples', link: '/en/examples/visual-examples' },
+  { text: 'Examples', link: '/en/examples/frameworks' },
 ];
 
 const esSidebar = [
@@ -85,7 +85,6 @@ const esSidebar = [
     text: 'Ejemplos',
     collapsed: false,
     items: [
-      { text: 'Ejemplos visuales', link: '/examples/visual-examples' },
       { text: 'Frameworks', link: '/examples/frameworks' },
     ],
   },
@@ -158,7 +157,6 @@ const enSidebar = [
     text: 'Examples',
     collapsed: false,
     items: [
-      { text: 'Visual examples', link: '/en/examples/visual-examples' },
       { text: 'Frameworks', link: '/en/examples/frameworks' },
     ],
   },
@@ -175,7 +173,7 @@ const enSidebar = [
 export default defineConfig({
   base: '/',
   cleanUrls: true,
-  description: 'Fundamentos frontend no visuales para el ecosistema tecnico de Nadia.',
+  description: 'Fundamentos frontend no visuales para el ecosistema tecnico de Nad.',
   head: [
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
@@ -183,7 +181,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#1e214a' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: '@micazoyolli/foundation' }],
-    ['meta', { property: 'og:description', content: 'The technical foundation behind Nadia’s frontend ecosystem.' }],
+    ['meta', { property: 'og:description', content: 'The technical foundation behind Nad’s frontend ecosystem.' }],
   ],
   lang: 'es-MX',
   lastUpdated: true,
@@ -193,12 +191,8 @@ export default defineConfig({
       label: 'Español',
       lang: 'es-MX',
       title: '@micazoyolli/foundation',
-      description: 'Fundamentos frontend no visuales para el ecosistema tecnico de Nadia.',
+      description: 'Fundamentos frontend no visuales para el ecosistema tecnico de Nad.',
       themeConfig: {
-        footer: {
-          message: 'Una capa tecnica pequeña creada por Nadia para proyectos reales.',
-          copyright: `MIT License. Version actual: ${packageJson.version}.`,
-        },
         nav: esNav,
         sidebar: esSidebar,
         editLink: {
@@ -225,12 +219,8 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US',
       title: '@micazoyolli/foundation',
-      description: 'Non-visual frontend foundations for Nadia’s technical ecosystem.',
+      description: 'Non-visual frontend foundations for Nad’s technical ecosystem.',
       themeConfig: {
-        footer: {
-          message: 'A small technical layer created by Nadia for real production projects.',
-          copyright: `MIT License. Current version: ${packageJson.version}.`,
-        },
         nav: enNav,
         sidebar: enSidebar,
         editLink: {
@@ -247,10 +237,6 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    footer: {
-      message: 'A small technical layer created by Nadia for real production projects.',
-      copyright: `MIT License. Current version: ${packageJson.version}.`,
-    },
     search: {
       provider: 'local',
     },

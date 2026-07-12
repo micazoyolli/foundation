@@ -23,3 +23,16 @@ Breakpoints define a shared responsive scale without imposing visual layouts.
 ```
 
 Use them for shared responsive decisions. Do not use them when a component should respond to its container instead.
+
+## Visual result
+
+<div class="breakpoint-demo">
+  <div class="breakpoint-track"></div>
+  <div class="breakpoint-labels"><span>xs 320</span><span>sm 425</span><span>md 768</span><span>lg 1024</span><span>xl 1280</span></div>
+</div>
+
+The demo shows the relative scale. It does not mean every project must use every breakpoint.
+
+## Compatibility
+
+Sass in Vite, Next.js, Vue, Angular and Astro projects.

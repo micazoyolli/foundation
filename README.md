@@ -1,8 +1,17 @@
 # @micazoyolli/foundation
 
-Fundamentos compartidos no visuales para los proyectos de Micazoyolli.
+[![npm version](https://img.shields.io/npm/v/@micazoyolli/foundation.svg)](https://www.npmjs.com/package/@micazoyolli/foundation)
+[![license](https://img.shields.io/npm/l/@micazoyolli/foundation.svg)](./LICENSE)
 
-`@micazoyolli/foundation` centraliza utilidades pequenas y estables que ya se repiten entre repos independientes: tokens SCSS base, mixins responsive, helpers TypeScript, accesibilidad ligera y utilidades SEO/build. No incluye React, componentes visuales, tokens de marca, layouts ni metadata especifica de ningun proyecto.
+Fundamentos frontend no visuales para construir repos independientes con una base tecnica consistente.
+
+Foundation centraliza mecanicas pequenas que se repiten entre proyectos: tokens SCSS base, mixins responsive, helpers TypeScript, primitivas DOM de accesibilidad y utilidades SEO/build. No incluye React, componentes visuales, tokens de marca, layouts ni metadata especifica.
+
+## Documentacion
+
+La documentacion completa esta en:
+
+[https://foundation.nadia.dev](https://foundation.nadia.dev)
 
 ## Instalacion
 
@@ -10,116 +19,51 @@ Fundamentos compartidos no visuales para los proyectos de Micazoyolli.
 yarn add @micazoyolli/foundation
 ```
 
-## Entrypoints
-
-TypeScript:
+## TypeScript
 
 ```ts
 import { cx, getCanonicalUrl } from '@micazoyolli/foundation';
+
+const className = cx('card', isActive && 'card--active');
+const canonical = getCanonicalUrl('https://example.com', '/contacto');
 ```
 
-SCSS:
+## SCSS
 
 ```scss
 @use '@micazoyolli/foundation/scss' as foundation;
+
+.section {
+  padding-block: foundation.$space-6;
+
+  @include foundation.down(foundation.$breakpoint-md) {
+    padding-block: foundation.$space-4;
+  }
+}
 ```
 
-## Documentacion navegable
+## Caracteristicas
 
-La documentacion publica vive en `docs/` y esta preparada con VitePress para Render Static Site en `foundation.nadia.dev`.
-
-El sitio es bilingue:
-
-- Espanol: `/`
-- Ingles: `/en/`
-
-```bash
-yarn docs:dev
-yarn docs:build
-yarn docs:preview
-```
-
-Para Render:
-
-- Build command: `yarn install --frozen-lockfile && yarn docs:build`
-- Publish directory: `docs/.vitepress/dist`
-- Node recomendado: `24.x`
-- Base VitePress: `/`
-
-## Documentacion Markdown
-
-### Primeros pasos
-
-- [Home](./docs/index.md)
-- [Getting Started](./docs/getting-started/index.md)
-- [Installation](./docs/installation.md)
-- [Start a new project](./docs/getting-started/start-a-new-project.md)
-
-### SCSS
-
-- [Breakpoints](./docs/scss/breakpoints.md)
-- [Spacing](./docs/scss/spacing.md)
-- [Motion](./docs/scss/motion.md)
-- [Mixins](./docs/scss/mixins.md)
-
-### TypeScript
-
-- [DOM y accesibilidad](./docs/typescript/dom.md)
-- [SEO y build](./docs/typescript/seo.md)
-- [Utils](./docs/typescript/utils.md)
-
-### Guias del ecosistema
-
-- [Filosofia y arquitectura](./docs/foundations/philosophy.md)
-- [Compatibilidad](./docs/foundations/compatibility.md)
-- [Naming conventions](./docs/foundations/naming.md)
-- [Versionado y actualizacion](./docs/foundations/versioning.md)
-- [Uso correcto e incorrecto](./docs/patterns/dos-and-donts.md)
-- [Atomic UI futuro](./docs/patterns/atomic-ui.md)
-- [Ejemplos visuales](./docs/examples/visual-examples.md)
-
-### Proyecto
-
-- [Changelog](./docs/changelog.md)
-- [Roadmap](./docs/roadmap.md)
-
-## Que incluye
-
-- Tokens SCSS base para spacing, radius, z-index, motion y breakpoints.
+- Tokens SCSS base: spacing, radius, z-index, motion y breakpoints.
 - Mixins SCSS para responsive y reduced motion.
-- `cx` para composicion simple de clases.
-- Guards TypeScript pequenos.
-- Helpers DOM/a11y para targets, teclado y media protegida.
-- Helpers DOM/a11y para foco, scroll lock, Escape y focus trap.
-- Helpers SEO/build para escaping, canonical, sitemap, metadata DOM y HTML estatico.
+- `cx` y guards TypeScript pequenos.
+- Helpers DOM para metadata client-side.
+- Primitivas de accesibilidad para focus, Escape, scroll lock y media protegida.
+- Helpers SEO/build para canonical, sitemap, HTML estatico y escaping.
+- Sin dependencias runtime pesadas y sin React.
 
-## Que NO incluye
+## Compatibilidad
 
-- Componentes React.
-- Botones, cards, layouts o grids visuales.
-- Tokens finales de marca, color o tipografia.
-- Metadata especifica de proyectos.
-- Logica de negocio.
-- Dependencias UI pesadas.
+Foundation puede usarse con React, Next.js, Vue, Angular, Astro, Vite y scripts Node segun el tipo de helper. Los helpers DOM deben ejecutarse solo en navegador.
 
 ## Scripts
 
 ```bash
-yarn install
 yarn build
-yarn clean
-yarn prepack
+yarn test
+yarn docs:build
 ```
 
-## Proyectos que ya lo consumen
-
-- TeInvitaASu Invitaciones
-- TeInvitaASu.Party
-- Micazoyolli
-- Estilo Natura
-- OhMamaMXX
-- WTFashion
-
-## Autora
+## Autoria
 
 Una creacion de [`<micazoyolli />`](https://nadia.dev)

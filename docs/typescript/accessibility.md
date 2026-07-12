@@ -73,5 +73,20 @@ document.addEventListener('contextmenu', (event) => {
 
 Estas utilidades deben acompañarse con HTML semantico, labels, `aria-*` cuando aplique y focus visible definido por el proyecto.
 
+## Focus visible
+
+Foundation no exporta estilos globales de focus. El proyecto consumidor debe mantener un indicador visible, consistente y con contraste suficiente.
+
+<div class="visual-card">
+  <a class="focus-demo" href="#focus-visible">Enfocame con Tab</a>
+</div>
+
+## Resultado visual de media protegida
+
+<div class="visual-card protected-media-demo">
+  <div class="protected-media-thumb" data-protected-media>IMG</div>
+  <p>La proteccion se limita a media concreta. No bloquea seleccion global, teclado ni lectura.</p>
+</div>
+
 Archivo/export relacionado:
 [src/a11y/focus.ts](https://github.com/micazoyolli/foundation/blob/main/src/a11y/focus.ts)

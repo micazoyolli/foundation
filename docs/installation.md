@@ -61,9 +61,6 @@ Si el repo tiene smoke checks:
 yarn smoke
 ```
 
-## Proyectos que ya lo usan
+## Uso en produccion
 
-- TeInvitaASu.Party: helpers SCSS, TypeScript y SEO/build.
-- Micazoyolli: helpers SCSS, TypeScript y SEO/build.
-- TeInvitaASu Invitaciones: fundamentos compartidos dentro de `@teinvitaasu/ui`.
-- Estilo Natura, OhMamaMXX y WTFashion: adopcion selectiva de utilidades no visuales.
+Foundation se utiliza como base compartida en sitios de produccion, aplicaciones de negocio y experiencias interactivas. Puedes conocer mas del ecosistema en [nadia.dev](https://nadia.dev).

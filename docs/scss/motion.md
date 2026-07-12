@@ -65,8 +65,13 @@ Genera un media query CSS.
 }
 ```
 
-## Proyectos que ya lo usan
+## Resultado visual
 
-- TeInvitaASu Invitaciones.
-- TeInvitaASu.Party.
-- Micazoyolli.
+<div class="visual-card">
+  <p>Pasa el cursor sobre el bloque. Si tu sistema usa movimiento reducido, el desplazamiento se cancela.</p>
+  <div class="motion-demo"></div>
+</div>
+
+## Consideraciones
+
+Respeta `prefers-reduced-motion`. No elimines feedback esencial sin una alternativa visible.

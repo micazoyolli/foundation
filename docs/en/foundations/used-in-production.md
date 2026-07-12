@@ -1,11 +1,17 @@
 # Used in Production
 
-These projects use Foundation in production or in their current technical base. Names and links were confirmed from Nadia.dev portfolio data and real package usage.
+Foundation is used as a shared base across production sites, business applications and interactive experiences.
 
-<div class="production-grid">
-  <div class="production-card"><strong>TeInvitaASu.Party</strong><p>Interactive digital invitation platform.</p><p><a href="https://teinvitaasu.party" target="_blank" rel="noreferrer">teinvitaasu.party</a></p><p>Uses <code>cx</code>, protected media, DOM/a11y and SEO/build.</p></div>
-  <div class="production-card"><strong>WTFashion</strong><p>Digital bag store with persistent wishlist and careful navigation.</p><p><a href="https://wtfashion.mx" target="_blank" rel="noreferrer">wtfashion.mx</a></p><p>Uses <code>cx</code> and protected media.</p></div>
-  <div class="production-card"><strong>Nadia.dev</strong><p>Nadia’s personal portfolio and frontend lab.</p><p><a href="https://nadia.dev" target="_blank" rel="noreferrer">nadia.dev</a></p><p>Uses DOM metadata and selective protected media.</p></div>
-  <div class="production-card"><strong>Estilo Natura</strong><p>Landing page for a beauty consultant.</p><p><a href="https://estilonatura.com" target="_blank" rel="noreferrer">estilonatura.com</a></p><p>Uses SCSS base, DOM metadata and protected media.</p></div>
-  <div class="production-card"><strong>OhMamaMXX</strong><p>Web platform for a moms community, events and products.</p><p><a href="https://ohmamamxx.com/" target="_blank" rel="noreferrer">ohmamamxx.com</a></p><p>Uses SCSS base, DOM metadata and overlay primitives.</p></div>
-</div>
+It does not store project names, private routes, internal domains or implementation-specific details. Its role is to support the common layer: base tokens, non-visual helpers, DOM accessibility and SEO/build utilities.
+
+## Learn more about the ecosystem
+
+You can see more of the public work around this ecosystem at [nadia.dev](https://nadia.dev).
+
+## What stays local in each project
+
+- Brand, palette and final typography.
+- Visual components.
+- Content, routes and specific metadata.
+- Assets, favicons and manifest icons.
+- Business rules.

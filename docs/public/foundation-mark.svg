@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
   <title id="title">Foundation mark</title>
-  <desc id="desc">A technical symbol inspired by Nadia's visual system.</desc>
+  <desc id="desc">A technical symbol inspired by Nad's visual system.</desc>
   <defs>
     <linearGradient id="foundation-gradient" x1="24" x2="196" y1="28" y2="190" gradientUnits="userSpaceOnUse">
       <stop stop-color="#23a6d5"/>

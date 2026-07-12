@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: '@micazoyolli/foundation'
-  text: La base tecnica detras del ecosistema frontend de Nadia.
-  tagline: Tokens SCSS, helpers TypeScript, primitivas DOM, accesibilidad y SEO/build para proyectos reales, sin React, sin marca y sin componentes visuales.
+  name: Foundation
+  text: La base tecnica detras del ecosistema frontend de Nad.
+  tagline: '@micazoyolli/foundation · Tokens SCSS, helpers TypeScript, primitivas DOM, accesibilidad y SEO/build para proyectos reales.'
   image:
     src: /foundation-mark.svg
     alt: Foundation mark
@@ -13,7 +13,7 @@ hero:
       text: Empezar
       link: /getting-started/
     - theme: alt
-      text: Ver documentacion
+      text: Documentacion
       link: /foundations/why-foundation
 
 features:
@@ -31,11 +31,11 @@ features:
     link: /typescript/seo
 ---
 
-<p class="foundation-kicker">created by Nadia</p>
+<p class="foundation-kicker">@micazoyolli/foundation</p>
 
 ## Que es Foundation
 
-`@micazoyolli/foundation` es una capa de fundamentos no visuales para mantener consistentes repos independientes. Nacio de necesidades repetidas en produccion: componer clases, compartir breakpoints, proteger media sin bloquear toda la pagina, manejar metadata y generar HTML/sitemaps estaticos.
+`@micazoyolli/foundation` es la base compartida para construir el ecosistema con una misma filosofia tecnica: piezas pequeñas, agnosticas a marca y extraidas de necesidades reales.
 
 ```bash
 yarn add @micazoyolli/foundation
@@ -52,11 +52,19 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
 <div class="foundation-grid">
   <div class="foundation-card">
     <strong>Version actual</strong>
-    <p><code>0.3.0</code></p>
+    <p><code>0.3.1</code></p>
   </div>
   <div class="foundation-card">
     <strong>NPM</strong>
     <p><a href="https://www.npmjs.com/package/@micazoyolli/foundation" target="_blank" rel="noreferrer">npmjs.com/package/@micazoyolli/foundation</a></p>
+  </div>
+  <div class="foundation-card">
+    <strong>Licencia</strong>
+    <p><code>MIT</code></p>
+  </div>
+  <div class="foundation-card">
+    <strong>Compatibilidad</strong>
+    <p>SCSS, navegador y scripts Node segun el helper.</p>
   </div>
   <div class="foundation-card">
     <strong>GitHub</strong>
@@ -64,9 +72,9 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
   </div>
 </div>
 
-## Relacion con Nadia.dev
+## Asi se construye el ecosistema
 
-Foundation forma parte del ecosistema tecnico de Nadia. Comparte su cuidado por interfaces expresivas y codigo mantenible, pero su identidad es la de una libreria base: sobria, documentada y lista para otros proyectos.
+Foundation forma parte del ecosistema tecnico de Nad. No compite con cada marca ni con cada interfaz: sostiene lo repetible para que cada proyecto pueda concentrarse en su identidad, contenido y experiencia.
 
 - Portafolio: [nadia.dev](https://nadia.dev)
 - GitHub: [github.com/micazoyolli](https://github.com/micazoyolli)

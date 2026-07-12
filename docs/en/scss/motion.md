@@ -23,3 +23,14 @@ Motion tokens define durations, easings and a `prefers-reduced-motion` mixin.
 ```
 
 Use this for decorative movement. Do not remove essential state feedback without an alternative.
+
+## Visual result
+
+<div class="visual-card">
+  <p>Hover the block. If your system requests reduced motion, the movement is removed.</p>
+  <div class="motion-demo"></div>
+</div>
+
+## Considerations
+
+Respect `prefers-reduced-motion`. Do not remove essential feedback without a visible alternative.

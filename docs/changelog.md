@@ -2,6 +2,12 @@
 
 Este changelog resume cambios relevantes del paquete. Para cambios detallados, revisar los commits del repositorio.
 
+## 0.3.1
+
+- Refina la documentacion navegable y README para npm.
+- Mejora legibilidad de codigo, hero, footer y ejemplos integrados.
+- No cambia exports ni comportamiento runtime.
+
 ## 0.3.0
 
 - Agrega helpers DOM para metadata client-side:

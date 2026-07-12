@@ -1,6 +1,6 @@
 # Getting Started
 
-`@micazoyolli/foundation` is the non-visual base of Nadia’s frontend ecosystem. It shares small, stable and reusable foundations across independent repositories without introducing React components, brand styles or product decisions.
+`@micazoyolli/foundation` is the non-visual base of Nad’s frontend ecosystem. It shares small, stable and reusable foundations across independent repositories without introducing React components, brand styles or product decisions.
 
 ## Includes
 

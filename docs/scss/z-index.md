@@ -14,10 +14,15 @@ La escala de z-index evita numeros magicos en capas comunes como headers, overla
 
 ## Resultado visual
 
-<div class="visual-card z-demo">
-  <div class="z-layer base">$z-base</div>
-  <div class="z-layer overlay">$z-overlay</div>
-  <div class="z-layer modal">$z-modal</div>
+<div class="visual-card">
+  <div class="z-scale-demo">
+    <div class="z-scale-row"><span class="z-scale-chip">$z-base · 0</span><span class="z-scale-level"></span><span class="z-scale-note">contenido base</span></div>
+    <div class="z-scale-row"><span class="z-scale-chip">$z-raised · 1</span><span class="z-scale-level"></span><span class="z-scale-note">contenido elevado</span></div>
+    <div class="z-scale-row"><span class="z-scale-chip">$z-header · 100</span><span class="z-scale-level"></span><span class="z-scale-note">header/sticky</span></div>
+    <div class="z-scale-row"><span class="z-scale-chip">$z-overlay · 1000</span><span class="z-scale-level"></span><span class="z-scale-note">overlay</span></div>
+    <div class="z-scale-row"><span class="z-scale-chip">$z-modal · 1100</span><span class="z-scale-level"></span><span class="z-scale-note">modal/drawer</span></div>
+    <div class="z-scale-row"><span class="z-scale-chip">$z-toast · 1200</span><span class="z-scale-level"></span><span class="z-scale-note">toast</span></div>
+  </div>
 </div>
 
 ## Import

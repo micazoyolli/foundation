@@ -1,7 +1,7 @@
 {
   "name": "@micazoyolli/foundation",
-  "version": "0.3.0",
-  "description": "Fundamentos compartidos no visuales para los proyectos de Micazoyolli.",
+  "version": "0.3.1",
+  "description": "Fundamentos frontend no visuales para el ecosistema tecnico de Nad.",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",

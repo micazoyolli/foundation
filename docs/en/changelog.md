@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1
+
+- Refines the documentation site and npm README.
+- Improves code readability, hero, footer and integrated examples.
+- Does not change exports or runtime behavior.
+
 ## 0.3.0
 
 - Adds client-side metadata DOM helpers: `updateDocumentTitle`, `upsertMeta`, `upsertCanonical` and `upsertAlternate`.

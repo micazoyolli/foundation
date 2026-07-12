@@ -50,10 +50,21 @@ No retornan valores en runtime. Compilan a valores CSS.
 }
 ```
 
-## Proyectos que ya los usan
+## Resultado visual
 
-- TeInvitaASu Invitaciones, mediante `@teinvitaasu/ui`.
-- Estilo Natura.
-- Micazoyolli.
-- OhMamaMXX.
-- TeInvitaASu.Party.
+<div class="breakpoint-demo">
+  <div class="breakpoint-track"></div>
+  <div class="breakpoint-labels">
+    <span>xs 320</span>
+    <span>sm 425</span>
+    <span>md 768</span>
+    <span>lg 1024</span>
+    <span>xl 1280</span>
+  </div>
+</div>
+
+El demo muestra la escala relativa. No implica que cada proyecto deba usar todos los cortes.
+
+## Compatibilidad
+
+Sass en proyectos Vite, Next.js, Vue, Angular y Astro.

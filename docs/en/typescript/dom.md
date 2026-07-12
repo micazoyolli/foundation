@@ -26,3 +26,27 @@ Centralizes `Enter`, `Space` and `Escape`.
 ## `isKeyboardActivation(event)`
 
 Returns `true` for keyboard activation through Enter or Space.
+
+## Focus management and scroll lock
+
+```ts
+import {
+  lockBodyScroll,
+  restoreFocus,
+  trapTabKey,
+  unlockBodyScroll,
+} from '@micazoyolli/foundation';
+
+const lock = lockBodyScroll();
+trapTabKey(event, panel);
+unlockBodyScroll(lock);
+restoreFocus(trigger);
+```
+
+<div class="visual-card overlay-demo">
+  <div class="overlay-demo-panel">
+    <strong>Accessible panel</strong>
+    <p>The pattern preserves focus, locks background scroll and supports Escape.</p>
+    <button class="focus-demo">Close</button>
+  </div>
+</div>

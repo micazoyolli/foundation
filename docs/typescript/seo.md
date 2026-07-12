@@ -127,6 +127,14 @@ const xml = buildSitemapXml([
 ], { lastmod: '2026-07-11' });
 ```
 
+### Resultado visual
+
+<div class="visual-card sitemap-demo">
+  &lt;url&gt;<br />
+  &nbsp;&nbsp;&lt;loc&gt;https://foundation.nadia.dev/&lt;/loc&gt;<br />
+  &lt;/url&gt;
+</div>
+
 ## `applyHtmlMetadata(html, metadata, alternates)`
 
 ### Que hace
@@ -164,12 +172,22 @@ const html = applyHtmlMetadata(template, {
   image: 'https://nadia.dev/meta.jpg',
   lang: 'en',
   siteName: '&lt;micazoyolli /&gt;',
-  title: 'About | Nadia',
+  title: 'About | Nad',
 }, [
   { hreflang: 'es', href: 'https://nadia.dev/sobre-mi' },
   { hreflang: 'en', href: 'https://nadia.dev/en/about' },
 ]);
 ```
+
+### Resultado visual
+
+<div class="metadata-preview">
+  <div class="metadata-preview-image">@micazoyolli/foundation</div>
+  <div class="metadata-preview-body">
+    <strong>Foundation documentation</strong>
+    <p>Canonical, Open Graph y Twitter metadata siguen viviendo en cada proyecto.</p>
+  </div>
+</div>
 
 ## `upsertMetaTag(html, selector, tag)` y `upsertLinkTag(html, selector, tag)`
 
@@ -202,10 +220,9 @@ getStaticRouteOutputPath('/categoria/boda');
 // "categoria/boda/index.html"
 ```
 
-## Proyectos que ya los usan
+## Uso en produccion
 
-- TeInvitaASu.Party: sitemap y HTML estatico por ruta.
-- Micazoyolli: sitemap, HTML estatico por idioma/ruta y hreflang.
+Foundation se utiliza como base compartida para generar metadata, canonical y sitemaps en sitios de produccion, aplicaciones de negocio y experiencias interactivas. Puedes conocer mas del ecosistema en [nadia.dev](https://nadia.dev).
 
 ## Metadata DOM client-side
 
@@ -311,9 +328,6 @@ upsertAlternate('es', spanishUrl);
 upsertAlternate('en', englishUrl);
 ```
 
-## Proyectos con metadata DOM client-side
+## Uso en produccion
 
-- TeInvitaASu.Party.
-- Micazoyolli.
-- OhMamaMXX.
-- Estilo Natura.
+Estos helpers se usan como capa compartida para metadata client-side en proyectos donde el contenido especifico vive localmente.

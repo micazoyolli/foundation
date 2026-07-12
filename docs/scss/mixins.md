@@ -97,10 +97,6 @@ Un media query con el bloque `@content`.
 
 Documentado en [motion](./motion.md).
 
-## Proyectos que ya los usan
+## Uso en produccion
 
-- TeInvitaASu Invitaciones.
-- TeInvitaASu.Party.
-- Micazoyolli.
-- Estilo Natura.
-- OhMamaMXX.
+Foundation se utiliza como base compartida en sitios de produccion, aplicaciones de negocio y experiencias interactivas.
