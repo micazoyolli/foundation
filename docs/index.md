@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Foundation
-  text: La base técnica detrás del ecosistema frontend de Nadia.
+  text: La base técnica detrás del ecosistema frontend de Nad.
   tagline: '@micazoyolli/foundation · Tokens SCSS, helpers TypeScript, primitivas DOM, accesibilidad y SEO/build para proyectos reales.'
   image:
     src: /foundation-mark.svg
@@ -74,7 +74,7 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
 
 ## Asi se construye el ecosistema
 
-Foundation forma parte del ecosistema técnico de Nadia. No compite con cada marca ni con cada interfaz: sostiene lo repetible para que cada proyecto pueda concentrarse en su identidad, contenido y experiencia.
+Foundation forma parte del ecosistema técnico de Nad. No compite con cada marca ni con cada interfaz: sostiene lo repetible para que cada proyecto pueda concentrarse en su identidad, contenido y experiencia.
 
 - Portafolio: [nadia.dev](https://nadia.dev)
 - GitHub: [github.com/micazoyolli](https://github.com/micazoyolli)

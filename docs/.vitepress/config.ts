@@ -173,7 +173,7 @@ const enSidebar = [
 export default defineConfig({
   base: '/',
   cleanUrls: true,
-  description: 'Fundamentos frontend no visuales para el ecosistema técnico de Nadia.',
+  description: 'Fundamentos frontend no visuales para el ecosistema técnico de Nad.',
   head: [
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
@@ -181,7 +181,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#1e214a' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: '@micazoyolli/foundation' }],
-    ['meta', { property: 'og:description', content: 'The technical foundation behind Nadia’s frontend ecosystem.' }],
+    ['meta', { property: 'og:description', content: 'The technical foundation behind Nad frontend ecosystem.' }],
   ],
   lang: 'es-MX',
   lastUpdated: true,
@@ -191,7 +191,7 @@ export default defineConfig({
       label: 'Español',
       lang: 'es-MX',
       title: '@micazoyolli/foundation',
-      description: 'Fundamentos frontend no visuales para el ecosistema técnico de Nadia.',
+      description: 'Fundamentos frontend no visuales para el ecosistema técnico de Nad.',
       themeConfig: {
         nav: esNav,
         sidebar: esSidebar,
@@ -219,7 +219,7 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US',
       title: '@micazoyolli/foundation',
-      description: 'Non-visual frontend foundations for Nadia’s technical ecosystem.',
+      description: 'Non-visual frontend foundations for Nad’s technical ecosystem.',
       themeConfig: {
         nav: enNav,
         sidebar: enSidebar,
@@ -248,7 +248,7 @@ export default defineConfig({
           svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 9h-3.08a15.5 15.5 0 0 0-1.2-5.02A8.02 8.02 0 0 1 18.93 11ZM12 4.04c.83 1.2 1.55 3.55 1.78 6.96h-3.56C10.45 7.59 11.17 5.24 12 4.04ZM4.26 13h3.89c.11 1.82.42 3.5.9 4.9A8.02 8.02 0 0 1 4.26 13Zm3.89-2H4.26a8.02 8.02 0 0 1 4.79-4.9A17.63 17.63 0 0 0 8.15 11ZM12 19.96c-.83-1.2-1.55-3.55-1.78-6.96h3.56c-.23 3.41-.95 5.76-1.78 6.96Zm2.65-2.06c.48-1.4.79-3.08.9-4.9h3.89a8.02 8.02 0 0 1-4.79 4.9Z"/></svg>',
         },
         link: nadia,
-        ariaLabel: 'Nadia.dev',
+        ariaLabel: 'nadia.dev',
       },
     ],
   },

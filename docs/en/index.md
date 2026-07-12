@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Foundation
-  text: The technical foundation behind Nadia’s frontend ecosystem.
+  text: The technical foundation behind Nad’s frontend ecosystem.
   tagline: '@micazoyolli/foundation · SCSS tokens, TypeScript helpers, DOM primitives, accessibility and SEO/build utilities for real projects.'
   image:
     src: /foundation-mark.svg
@@ -59,7 +59,7 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
 
 ## This is how the ecosystem is built
 
-Foundation is part of Nadia’s technical ecosystem. It does not compete with each brand or interface: it supports the repeatable layer so every project can focus on identity, content and experience.
+Foundation is part of Nad’s technical ecosystem. It does not compete with each brand or interface: it supports the repeatable layer so every project can focus on identity, content and experience.
 
 - Portfolio: [nadia.dev](https://nadia.dev)
 - GitHub: [github.com/micazoyolli](https://github.com/micazoyolli)

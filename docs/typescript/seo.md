@@ -172,7 +172,7 @@ const html = applyHtmlMetadata(template, {
   image: 'https://nadia.dev/meta.jpg',
   lang: 'en',
   siteName: '&lt;micazoyolli /&gt;',
-  title: 'About | Nadia',
+  title: 'About | Nad',
 }, [
   { hreflang: 'es', href: 'https://nadia.dev/sobre-mi' },
   { hreflang: 'en', href: 'https://nadia.dev/en/about' },
