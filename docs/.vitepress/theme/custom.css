@@ -226,8 +226,20 @@ a {
   box-shadow: 0 18px 48px rgba(6, 10, 52, 0.14);
 }
 
+.vp-doc div[class*='language-'] code,
+.vp-doc div[class*='language-'] pre,
 .vp-doc div[class*='language-'] span {
-  color: var(--shiki-light) !important;
+  color: #f8f2fb !important;
+}
+
+.vp-doc div[class*='language-'] .line span[style*='24292E'],
+.vp-doc div[class*='language-'] .line span[style*='E1E4E8'] {
+  color: #f8f2fb !important;
+}
+
+.vp-doc div[class*='language-'] .line span[style*='22863A'],
+.vp-doc div[class*='language-'] .line span[style*='85E89D'] {
+  color: #8ee6a8 !important;
 }
 
 .vp-doc div[class*='language-'] .line span[style*='D73A49'],
@@ -250,6 +262,11 @@ a {
 .vp-doc div[class*='language-'] .line span[style*='6A737D'],
 .vp-doc div[class*='language-'] .line span[style*='6B737C'] {
   color: #a9aec8 !important;
+}
+
+.vp-doc div[class*='language-'] .line span[style*='E36209'],
+.vp-doc div[class*='language-'] .line span[style*='FFAB70'] {
+  color: #ff9f43 !important;
 }
 
 .vp-doc div[class*='language-'] .lang {
