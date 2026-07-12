@@ -308,6 +308,19 @@ a {
   margin-block: foundation.$space-4;
 }
 
+.VPHome a:not(.VPButton):not(.VPFeature) {
+  color: var(--foundation-pink);
+  font-weight: 800;
+  text-decoration-color: rgba(231, 60, 126, 0.42);
+  text-underline-offset: 0.18em;
+}
+
+.VPHome a:not(.VPButton):not(.VPFeature):hover,
+.VPHome a:not(.VPButton):not(.VPFeature):focus-visible {
+  color: var(--foundation-purple);
+  text-decoration-color: currentColor;
+}
+
 .vp-doc h1,
 .vp-doc h2 {
   font-family: 'Barriecito', var(--vp-font-family-base);
@@ -490,6 +503,26 @@ a {
 :where(.vp-doc, .VPHome) div[class*='language-'] .copy:focus-visible {
   background-color: rgba(255, 235, 59, 0.16);
   border-color: var(--foundation-yellow);
+}
+
+.vp-doc div[class*='language-'],
+.VPHome div[class*='language-'] {
+  margin: foundation.$space-4 0;
+}
+
+.vp-doc div[class*='language-'] + div[class*='language-'],
+.VPHome div[class*='language-'] + div[class*='language-'] {
+  margin-top: foundation.$space-3;
+}
+
+.vp-doc [class*='language-'] pre,
+.VPHome [class*='language-'] pre {
+  padding: foundation.$space-5 0;
+}
+
+.vp-doc [class*='language-'] code,
+.VPHome [class*='language-'] code {
+  padding: 0 foundation.$space-6;
 }
 
 .doc-note {
@@ -759,6 +792,11 @@ a {
 }
 
 @include foundation.down(foundation.$breakpoint-md) {
+  .VPHome > div[style*='position: relative'],
+  .VPHome > div[style*='position:relative'] {
+    margin-top: foundation.$space-5;
+  }
+
   .VPHome > div[style*='position: relative'] > div,
   .VPHome > div[style*='position:relative'] > div {
     padding-inline: foundation.$space-4;
@@ -810,17 +848,21 @@ a {
     -webkit-overflow-scrolling: touch;
   }
 
-  :where(.vp-doc, .VPHome) div[class*='language-'] {
+  .vp-doc div[class*='language-'],
+  .VPHome div[class*='language-'] {
     border-radius: 10px;
-    margin-inline: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  :where(.vp-doc, .VPHome) div[class*='language-'] pre {
+  .vp-doc [class*='language-'] pre,
+  .VPHome [class*='language-'] pre {
     padding-right: 3.75rem;
     -webkit-overflow-scrolling: touch;
   }
 
-  :where(.vp-doc, .VPHome) div[class*='language-'] code {
+  .vp-doc [class*='language-'] code,
+  .VPHome [class*='language-'] code {
     padding-inline: foundation.$space-4;
   }
 
