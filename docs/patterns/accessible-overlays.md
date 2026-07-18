@@ -31,8 +31,8 @@ function cleanup() {
 
 Archivos relacionados:
 
-- [src/a11y/focus.ts](https://github.com/micazoyolli/foundation/blob/master/src/a11y/focus.ts)
-- [src/a11y/keyboard.ts](https://github.com/micazoyolli/foundation/blob/master/src/a11y/keyboard.ts)
+- [src/a11y/focus.ts](https://github.com/micazoyolli/foundation/blob/main/src/a11y/focus.ts)
+- [src/a11y/keyboard.ts](https://github.com/micazoyolli/foundation/blob/main/src/a11y/keyboard.ts)
 
 ## Cuándo no usar este patrón
 

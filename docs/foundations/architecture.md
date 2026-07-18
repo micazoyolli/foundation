@@ -32,8 +32,8 @@ SCSS:
 
 Los exports públicos viven en:
 
-- [src/index.ts](https://github.com/micazoyolli/foundation/blob/master/src/index.ts)
-- [src/scss/index.scss](https://github.com/micazoyolli/foundation/blob/master/src/scss/index.scss)
+- [src/index.ts](https://github.com/micazoyolli/foundation/blob/main/src/index.ts)
+- [src/scss/index.scss](https://github.com/micazoyolli/foundation/blob/main/src/scss/index.scss)
 
 ## Reglas internas
 

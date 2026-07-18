@@ -10,7 +10,7 @@ Las utilidades TypeScript son pequeñas, sin framework y sin estado global.
 - SEO/build: escaping, canonical, sitemap, metadata y HTML estático.
 
 Archivo/export relacionado:
-[src/index.ts](https://github.com/micazoyolli/foundation/blob/master/src/index.ts)
+[src/index.ts](https://github.com/micazoyolli/foundation/blob/main/src/index.ts)
 
 ## Ejemplo correcto
 

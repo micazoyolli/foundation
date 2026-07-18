@@ -26,9 +26,9 @@ const html = applyHtmlMetadata(template, {
 
 Archivos relacionados:
 
-- [src/seo/url.ts](https://github.com/micazoyolli/foundation/blob/master/src/seo/url.ts)
-- [src/seo/sitemap.ts](https://github.com/micazoyolli/foundation/blob/master/src/seo/sitemap.ts)
-- [src/seo/html.ts](https://github.com/micazoyolli/foundation/blob/master/src/seo/html.ts)
+- [src/seo/url.ts](https://github.com/micazoyolli/foundation/blob/main/src/seo/url.ts)
+- [src/seo/sitemap.ts](https://github.com/micazoyolli/foundation/blob/main/src/seo/sitemap.ts)
+- [src/seo/html.ts](https://github.com/micazoyolli/foundation/blob/main/src/seo/html.ts)
 
 ## No hacer
 
