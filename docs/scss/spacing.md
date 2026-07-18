@@ -57,11 +57,11 @@ Valores SCSS compilados a CSS.
 ## Resultado visual
 
 <div class="visual-card">
-  <div class="space-demo"><span>$space-1</span><div class="space-box" style="width: 0.25rem"></div></div>
-  <div class="space-demo"><span>$space-2</span><div class="space-box" style="width: 0.5rem"></div></div>
-  <div class="space-demo"><span>$space-4</span><div class="space-box" style="width: 1rem"></div></div>
-  <div class="space-demo"><span>$space-6</span><div class="space-box" style="width: 2rem"></div></div>
-  <div class="space-demo"><span>$space-8</span><div class="space-box" style="width: 4rem"></div></div>
+  <div class="space-demo"><span>$space-1</span><div class="space-box space-box--1"></div></div>
+  <div class="space-demo"><span>$space-2</span><div class="space-box space-box--2"></div></div>
+  <div class="space-demo"><span>$space-4</span><div class="space-box space-box--4"></div></div>
+  <div class="space-demo"><span>$space-6</span><div class="space-box space-box--6"></div></div>
+  <div class="space-demo"><span>$space-8</span><div class="space-box space-box--8"></div></div>
 </div>
 
 ## Tokens relacionados: radius
@@ -99,10 +99,10 @@ Los radius son parte del entrypoint SCSS y sirven para mantener radios base cons
 ### Resultado visual
 
 <div class="visual-grid">
-  <div class="visual-card"><p><code>$radius-xs</code></p><div class="radius-sample" style="border-radius: 4px"></div></div>
-  <div class="visual-card"><p><code>$radius-md</code></p><div class="radius-sample" style="border-radius: 8px"></div></div>
-  <div class="visual-card"><p><code>$radius-xl</code></p><div class="radius-sample" style="border-radius: 16px"></div></div>
-  <div class="visual-card"><p><code>$radius-pill</code></p><div class="radius-sample" style="border-radius: 999px"></div></div>
+  <div class="visual-card"><p><code>$radius-xs</code></p><div class="radius-sample radius-sample--xs"></div></div>
+  <div class="visual-card"><p><code>$radius-md</code></p><div class="radius-sample radius-sample--md"></div></div>
+  <div class="visual-card"><p><code>$radius-xl</code></p><div class="radius-sample radius-sample--xl"></div></div>
+  <div class="visual-card"><p><code>$radius-pill</code></p><div class="radius-sample radius-sample--pill"></div></div>
 </div>
 
 ## Compatibilidad

@@ -638,6 +638,26 @@ a {
   background: linear-gradient(90deg, var(--foundation-purple), var(--foundation-pink));
   border-radius: 4px;
   height: 1rem;
+
+  &--1 {
+    width: foundation.$space-1;
+  }
+
+  &--2 {
+    width: foundation.$space-2;
+  }
+
+  &--4 {
+    width: foundation.$space-4;
+  }
+
+  &--6 {
+    width: foundation.$space-6;
+  }
+
+  &--8 {
+    width: foundation.$space-8;
+  }
 }
 
 .radius-sample {
@@ -645,6 +665,22 @@ a {
     linear-gradient(135deg, rgba(136, 78, 160, 0.88), rgba(35, 166, 213, 0.78)),
     var(--foundation-lilac);
   height: 4rem;
+
+  &--md {
+    border-radius: foundation.$radius-md;
+  }
+
+  &--pill {
+    border-radius: foundation.$radius-pill;
+  }
+
+  &--xl {
+    border-radius: foundation.$radius-xl;
+  }
+
+  &--xs {
+    border-radius: foundation.$radius-xs;
+  }
 }
 
 .breakpoint-demo {
