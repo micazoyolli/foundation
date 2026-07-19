@@ -51,7 +51,7 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
 ```
 
 <div class="foundation-grid">
-  <div class="foundation-card"><strong>Current version</strong><p><code>0.3.2</code></p></div>
+  <div class="foundation-card"><strong>Current version</strong><p><code>0.4.0</code></p></div>
   <div class="foundation-card"><strong>NPM</strong><p><a href="https://www.npmjs.com/package/@micazoyolli/foundation" target="_blank" rel="noreferrer">npmjs.com/package/@micazoyolli/foundation</a></p></div>
   <div class="foundation-card"><strong>License</strong><p><code>MIT</code></p></div>
   <div class="foundation-card"><strong>Compatibility</strong><p>SCSS, browser and Node scripts depending on the helper.</p></div>

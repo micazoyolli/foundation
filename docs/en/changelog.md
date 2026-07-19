@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0
+
+- Adds `micazoyolli-gh-pages-deploy`, a shared CLI for publishing `dist` to GitHub Pages without creating commits on `main`.
+- Documents the consumer deployment flow in English and Spanish.
+- Keeps exports and runtime behavior unchanged.
+
 ## 0.3.2
 
 - Updates the public branding for the documentation site.

@@ -2,6 +2,12 @@
 
 Este changelog resume cambios relevantes del paquete. Para cambios detallados, revisar los commits del repositorio.
 
+## 0.4.0
+
+- Agrega `micazoyolli-gh-pages-deploy`, un CLI compartido para publicar `dist` en GitHub Pages sin crear commits en `main`.
+- Documenta el flujo de deploy para consumidores en español e inglés.
+- Mantiene sin cambios los exports y el comportamiento runtime.
+
 ## 0.3.2
 
 - Actualiza el branding público del sitio de documentación.
