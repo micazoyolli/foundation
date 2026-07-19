@@ -5,13 +5,13 @@
 
 Fundamentos frontend no visuales para construir repos independientes con una base técnica consistente.
 
-Foundation centraliza mecánicas pequeñas que se repiten entre proyectos: tokens SCSS base, mixins responsive, helpers TypeScript, primitivas DOM de accesibilidad y utilidades SEO/build. No incluye React, componentes visuales, tokens de marca, layouts ni metadata específica.
+Foundation centraliza mecánicas pequeñas que se repiten entre proyectos: tokens SCSS base, mixins responsive, helpers TypeScript, primitivas DOM de accesibilidad y helpers para SEO/build. No incluye React, componentes visuales, tokens de marca, layouts ni metadata específica.
 
-## Documentation
+## Documentación
 
 La documentación principal vive en [foundation.nadia.dev](https://foundation.nadia.dev). Ahí está la guía completa, arquitectura, ejemplos, compatibilidad y referencia de la API.
 
-## Features
+## Características
 
 - Tokens SCSS base: spacing, radius, z-index, motion y breakpoints.
 - Mixins SCSS para responsive y reduced motion.
@@ -53,11 +53,11 @@ const canonical = getCanonicalUrl('https://example.com', '/contacto');
 
 ## Compatibilidad
 
-Foundation es framework agnostic y puede usarse con React, Next.js, Vue, Angular, Astro, Vite y Node según el helper utilizado.
+Foundation es independiente del framework y puede usarse con React, Next.js, Vue, Angular, Astro, Vite y Node según el helper utilizado.
 
-## Resources
+## Recursos
 
-- Documentation: [foundation.nadia.dev](https://foundation.nadia.dev)
+- Documentación: [foundation.nadia.dev](https://foundation.nadia.dev)
 - GitHub: [github.com/micazoyolli/foundation](https://github.com/micazoyolli/foundation)
 - npm: [npmjs.com/package/@micazoyolli/foundation](https://www.npmjs.com/package/@micazoyolli/foundation)
 
