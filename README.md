@@ -19,6 +19,7 @@ La documentación principal vive en [foundation.nadia.dev](https://foundation.na
 - Helpers DOM para metadata client-side.
 - Primitivas de accesibilidad para focus, Escape, scroll lock y media protegida.
 - Helpers SEO/build para canonical, sitemap, HTML estático y escaping.
+- CLI de build para publicar `dist` en GitHub Pages sin crear commits en la rama fuente.
 - Sin dependencias runtime pesadas y sin React.
 
 ## Instalación
@@ -71,6 +72,14 @@ yarn build
 yarn test
 yarn docs:build
 ```
+
+## CLI
+
+```bash
+micazoyolli-gh-pages-deploy
+```
+
+El CLI publica `dist` en `origin/gh-pages` desde un worktree temporal. Es tooling de build/deploy, no un export runtime.
 
 ## Autoría
 

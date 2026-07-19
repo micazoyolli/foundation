@@ -12,6 +12,9 @@
       "ES2022"
     ],
     "moduleResolution": "NodeNext",
+    "types": [
+      "node"
+    ],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,

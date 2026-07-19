@@ -91,6 +91,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://foundation.nadia.dev/en/patterns/github-pages-deploy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://foundation.nadia.dev/en/patterns/seo-build</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -217,6 +222,11 @@
   </url>
   <url>
     <loc>https://foundation.nadia.dev/patterns/dos-and-donts</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://foundation.nadia.dev/patterns/github-pages-deploy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -88,6 +88,7 @@ const esSidebar = [
     items: [
       { text: 'Correcto / Incorrecto', link: '/patterns/dos-and-donts' },
       { text: 'SEO build', link: '/patterns/seo-build' },
+      { text: 'GitHub Pages deploy', link: '/patterns/github-pages-deploy' },
       { text: 'Overlays accesibles', link: '/patterns/accessible-overlays' },
       { text: 'Atomic UI — Future', link: '/patterns/atomic-ui' },
     ],
@@ -160,6 +161,7 @@ const enSidebar = [
     items: [
       { text: 'Do / Do not', link: '/en/patterns/dos-and-donts' },
       { text: 'SEO build', link: '/en/patterns/seo-build' },
+      { text: 'GitHub Pages deploy', link: '/en/patterns/github-pages-deploy' },
       { text: 'Accessible overlays', link: '/en/patterns/accessible-overlays' },
       { text: 'Atomic UI — Future', link: '/en/patterns/atomic-ui' },
     ],
