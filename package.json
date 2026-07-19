@@ -27,7 +27,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "micazoyolli-gh-pages-deploy": "./dist/cli/deploy-github-pages.js"
+    "micazoyolli-gh-pages-deploy": "dist/cli/deploy-github-pages.js"
   },
   "exports": {
     ".": {
