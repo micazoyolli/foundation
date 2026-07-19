@@ -51,7 +51,7 @@ import { cx, getCanonicalUrl, lockBodyScroll } from '@micazoyolli/foundation';
 <div class="foundation-grid">
   <div class="foundation-card">
     <strong>Versión actual</strong>
-    <p><code>0.4.0</code></p>
+    <p><code>0.4.1</code></p>
   </div>
   <div class="foundation-card">
     <strong>NPM</strong>

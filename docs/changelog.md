@@ -2,6 +2,12 @@
 
 Este changelog resume cambios relevantes del paquete. Para cambios detallados, revisar los commits del repositorio.
 
+## 0.4.1
+
+- Mejora los errores del CLI de GitHub Pages cuando `dist/` sigue trackeado por Git.
+- Permite el primer deploy aunque `origin/gh-pages` todavía no exista.
+- Documenta los prerrequisitos reales para proyectos consumidores y CI.
+
 ## 0.4.0
 
 - Agrega `micazoyolli-gh-pages-deploy`, un CLI compartido para publicar `dist` en GitHub Pages sin crear commits en `main`.

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.1
+
+- Improves GitHub Pages CLI errors when `dist/` is still tracked by Git.
+- Allows the first deployment when `origin/gh-pages` does not exist yet.
+- Documents the real prerequisites for consumer projects and CI.
+
 ## 0.4.0
 
 - Adds `micazoyolli-gh-pages-deploy`, a shared CLI for publishing `dist` to GitHub Pages without creating commits on `main`.

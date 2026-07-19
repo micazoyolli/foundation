@@ -1,6 +1,6 @@
 import { cp, mkdtemp, readdir, rm, stat } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { basename, join, resolve } from 'node:path';
+import { basename, isAbsolute, join, relative, resolve, sep } from 'node:path';
 import { spawnSync } from 'node:child_process';
 const DEFAULT_BUILD_DIR = 'dist';
 const DEFAULT_DEPLOYMENT_BRANCH = 'gh-pages';
@@ -51,6 +51,27 @@ const getRemoteTrackingRef = (remote, branch) => `refs/remotes/${remote}/${branc
 const fetchRemoteBranch = (repositoryRoot, remote, branch) => {
     runGit(['fetch', remote, `+${branch}:${getRemoteTrackingRef(remote, branch)}`], repositoryRoot);
 };
+const remoteBranchExists = (repositoryRoot, remote, branch) => {
+    const result = spawnSync('git', ['ls-remote', '--exit-code', '--heads', remote, branch], {
+        cwd: repositoryRoot,
+        encoding: 'utf8',
+        env: {
+            ...process.env,
+            GIT_TERMINAL_PROMPT: '0',
+        },
+    });
+    if (result.error) {
+        throw new GithubPagesDeployError(`Failed to check ${remote}/${branch}: ${result.error.message}`);
+    }
+    if (result.status === 0) {
+        return true;
+    }
+    if (result.status === 2) {
+        return false;
+    }
+    const details = (result.stderr || result.stdout || '').trim();
+    throw new GithubPagesDeployError(`Git command failed: git ls-remote --exit-code --heads ${remote} ${branch}${details ? `\n${details}` : ''}`);
+};
 const getRepositoryRoot = (cwd) => {
     try {
         return runGit(['rev-parse', '--show-toplevel'], cwd).stdout;
@@ -59,31 +80,40 @@ const getRepositoryRoot = (cwd) => {
         throw new GithubPagesDeployError('Current directory must be inside a Git repository.');
     }
 };
+const toGitPath = (path) => path.split(sep).join('/');
+const getBuildDirectoryPathspec = (repositoryRoot, buildDirectory) => {
+    const relativeBuildDirectory = relative(repositoryRoot, buildDirectory);
+    if (!relativeBuildDirectory || relativeBuildDirectory === '..' || relativeBuildDirectory.startsWith(`..${sep}`) || isAbsolute(relativeBuildDirectory)) {
+        throw new GithubPagesDeployError(`Build directory must be inside the repository: ${buildDirectory}`);
+    }
+    return toGitPath(relativeBuildDirectory);
+};
+const assertBuildDirectoryIsUntracked = (repositoryRoot, buildDirectoryPathspec, sourceBranch) => {
+    const trackedFiles = runGit(['ls-files', '--', buildDirectoryPathspec], repositoryRoot).stdout;
+    if (trackedFiles) {
+        throw new GithubPagesDeployError([
+            `Build directory "${buildDirectoryPathspec}" must not be tracked by Git.`,
+            `Remove it from ${sourceBranch} with: git rm -r --cached ${buildDirectoryPathspec}`,
+            `Keep "${buildDirectoryPathspec}/" ignored in .gitignore before deploying.`,
+        ].join('\n'));
+    }
+};
 const assertCleanWorkingTree = (repositoryRoot) => {
     const status = runGit(['status', '--porcelain'], repositoryRoot).stdout;
     if (status) {
         throw new GithubPagesDeployError(`Working tree must be clean before deploying.\n${status}`);
     }
 };
-const assertSyncedBranch = (repositoryRoot, sourceBranch, remote, deploymentBranch) => {
+const assertSyncedBranch = (repositoryRoot, sourceBranch, remote) => {
     const currentBranch = runGit(['branch', '--show-current'], repositoryRoot).stdout;
     if (currentBranch !== sourceBranch) {
         throw new GithubPagesDeployError(`Current branch must be "${sourceBranch}". Found "${currentBranch || 'detached HEAD'}".`);
     }
     fetchRemoteBranch(repositoryRoot, remote, sourceBranch);
-    fetchRemoteBranch(repositoryRoot, remote, deploymentBranch);
     const localHead = runGit(['rev-parse', sourceBranch], repositoryRoot).stdout;
     const remoteHead = runGit(['rev-parse', `${remote}/${sourceBranch}`], repositoryRoot).stdout;
     if (localHead !== remoteHead) {
         throw new GithubPagesDeployError(`${sourceBranch} must be synchronized with ${remote}/${sourceBranch} before deploying.`);
-    }
-};
-const assertDeploymentBranchExists = (repositoryRoot, deploymentRef) => {
-    try {
-        runGit(['rev-parse', '--verify', `${deploymentRef}^{commit}`], repositoryRoot);
-    }
-    catch {
-        throw new GithubPagesDeployError(`Deployment branch "${deploymentRef}" must exist before deploying.`);
     }
 };
 const assertBuildDirectory = async (buildDirectory) => {
@@ -133,15 +163,23 @@ export const deployGithubPages = async (options = {}) => {
     assertSafeGitRefPart(resolved.deploymentBranch, 'deployment branch');
     const repositoryRoot = getRepositoryRoot(resolved.cwd);
     const buildDirectory = resolve(repositoryRoot, resolved.buildDir);
+    const buildDirectoryPathspec = getBuildDirectoryPathspec(repositoryRoot, buildDirectory);
     const deploymentRef = `${resolved.remote}/${resolved.deploymentBranch}`;
+    assertBuildDirectoryIsUntracked(repositoryRoot, buildDirectoryPathspec, resolved.sourceBranch);
     assertCleanWorkingTree(repositoryRoot);
-    assertSyncedBranch(repositoryRoot, resolved.sourceBranch, resolved.remote, resolved.deploymentBranch);
-    assertDeploymentBranchExists(repositoryRoot, deploymentRef);
+    assertSyncedBranch(repositoryRoot, resolved.sourceBranch, resolved.remote);
+    const deploymentBranchExists = remoteBranchExists(repositoryRoot, resolved.remote, resolved.deploymentBranch);
+    if (deploymentBranchExists) {
+        fetchRemoteBranch(repositoryRoot, resolved.remote, resolved.deploymentBranch);
+    }
     await assertBuildDirectory(buildDirectory);
     const tempRoot = await mkdtemp(join(tmpdir(), 'micazoyolli-gh-pages-'));
     const worktreePath = join(tempRoot, basename(repositoryRoot));
     try {
-        runGit(['worktree', 'add', '--detach', worktreePath, deploymentRef], repositoryRoot);
+        runGit(['worktree', 'add', '--detach', worktreePath, deploymentBranchExists ? deploymentRef : resolved.sourceBranch], repositoryRoot);
+        if (!deploymentBranchExists) {
+            runGit(['checkout', '--orphan', resolved.deploymentBranch], worktreePath);
+        }
         await clearWorktree(worktreePath);
         await cp(buildDirectory, worktreePath, {
             force: true,
@@ -151,6 +189,7 @@ export const deployGithubPages = async (options = {}) => {
         if (!deploymentStatus) {
             return {
                 deploymentBranch: resolved.deploymentBranch,
+                initialDeployment: false,
                 pushed: false,
                 reason: 'Deployment content is unchanged.',
                 remote: resolved.remote,
@@ -165,6 +204,7 @@ export const deployGithubPages = async (options = {}) => {
         return {
             commit,
             deploymentBranch: resolved.deploymentBranch,
+            initialDeployment: !deploymentBranchExists,
             pushed: true,
             remote: resolved.remote,
             repositoryRoot,

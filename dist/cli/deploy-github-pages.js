@@ -8,7 +8,7 @@ const main = async () => {
         console.log('Repository left unchanged.');
         return;
     }
-    console.log(`Published ${result.commit} to ${result.remote}/${result.deploymentBranch}.`);
+    console.log(`${result.initialDeployment ? 'Created' : 'Published'} ${result.commit} to ${result.remote}/${result.deploymentBranch}.`);
     console.log('Repository left clean on main.');
 };
 main().catch((error) => {

@@ -9,6 +9,7 @@ export type GithubPagesDeployOptions = {
 export type GithubPagesDeployResult = {
     commit?: string;
     deploymentBranch: string;
+    initialDeployment: boolean;
     pushed: boolean;
     reason?: string;
     remote: string;
