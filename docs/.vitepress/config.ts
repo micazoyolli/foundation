@@ -19,6 +19,14 @@ const getPageUrl = (relativePath: string) => {
   return new URL(path, siteUrl).href;
 };
 
+const getAlternateUrls = (relativePath: string) => {
+  const normalizedPath = relativePath.replace(/^en\//, '');
+  const es = getPageUrl(normalizedPath);
+  const en = getPageUrl(`en/${normalizedPath}`);
+
+  return { en, es };
+};
+
 const esNav = [
   { text: 'Inicio', link: '/' },
   { text: 'Empezar', link: '/getting-started/' },
@@ -263,10 +271,25 @@ export default defineConfig({
   },
   transformHead({ pageData }) {
     const url = getPageUrl(pageData.relativePath);
-
-    return [
+    const pageHead = [
       ['link', { rel: 'canonical', href: url }],
       ['meta', { property: 'og:url', content: url }],
+    ];
+
+    if (pageData.isNotFound) {
+      return [
+        ...pageHead,
+        ['meta', { name: 'robots', content: 'noindex, nofollow' }],
+      ];
+    }
+
+    const alternates = getAlternateUrls(pageData.relativePath);
+
+    return [
+      ...pageHead,
+      ['link', { rel: 'alternate', hreflang: 'es', href: alternates.es }],
+      ['link', { rel: 'alternate', hreflang: 'en', href: alternates.en }],
+      ['link', { rel: 'alternate', hreflang: 'x-default', href: alternates.es }],
     ];
   },
   themeConfig: {
