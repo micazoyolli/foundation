@@ -81,6 +81,10 @@ yarn test
 yarn docs:build
 ```
 
+## 🚢 Despliegue en GitHub Pages
+
+La documentación se publica en `foundation.nadia.dev` mediante el workflow `.github/workflows/deploy-docs.yml`. GitHub Actions ejecuta `yarn docs:build` y publica exclusivamente `docs/.vitepress/dist`.
+
 ## 👩‍💻 Autoría
 
 Una creación de [`<micazoyolli />`](https://nadia.dev)

@@ -11,7 +11,7 @@ Foundation se mantiene como una base no visual. El roadmap evita crecer por iner
   <div class="principle-card"><strong>Accessibility primitives</strong><span>Focus, Escape, scroll lock, keyboard y protected media.</span></div>
   <div class="principle-card"><strong>DOM helpers</strong><span>Title, meta, canonical y alternates client-side.</span></div>
   <div class="principle-card"><strong>SEO/build helpers</strong><span>Escaping, canonical, sitemap y metadata HTML estática.</span></div>
-  <div class="principle-card"><strong>Documentation</strong><span>Sitio VitePress bilingue preparado para Render.</span></div>
+  <div class="principle-card"><strong>Documentación</strong><span>Sitio VitePress bilingüe publicado en GitHub Pages.</span></div>
 </div>
 
 ## Futuro

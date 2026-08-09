@@ -11,7 +11,7 @@ Foundation remains a non-visual foundation layer.
   <div class="principle-card"><strong>Accessibility primitives</strong><span>Focus, Escape, scroll lock, keyboard and protected media.</span></div>
   <div class="principle-card"><strong>DOM helpers</strong><span>Title, meta, canonical and client-side alternates.</span></div>
   <div class="principle-card"><strong>SEO/build helpers</strong><span>Escaping, canonical URLs, sitemap and static HTML metadata.</span></div>
-  <div class="principle-card"><strong>Documentation</strong><span>Bilingual VitePress site prepared for Render.</span></div>
+  <div class="principle-card"><strong>Documentation</strong><span>Bilingual VitePress site published on GitHub Pages.</span></div>
 </div>
 
 ## Future
