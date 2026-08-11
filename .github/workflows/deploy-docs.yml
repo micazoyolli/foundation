@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/deploy-docs.yml'
       - 'docs/**'
+      - '.node-version'
       - 'package.json'
       - 'scripts/generate-docs-seo.mjs'
       - 'src/**'
@@ -33,7 +34,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: yarn
 
       - name: Install dependencies
