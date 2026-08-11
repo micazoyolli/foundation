@@ -2,8 +2,8 @@
 
 ## Requisitos
 
-- Node `>=22.13.0` recomendado en los proyectos del ecosistema.
-- Yarn 1 en los repos actuales.
+- Node `24.18.1`, con rango compatible `>=24.18.1 <25`.
+- Yarn `1.22.22`.
 - Sass si se consume el entrypoint SCSS.
 
 ## Instalación

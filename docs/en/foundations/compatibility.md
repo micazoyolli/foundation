@@ -13,11 +13,11 @@ Compatibility depends on the helper type. Foundation does not require React.
   </tbody>
 </table>
 
-Recommended Node version for docs and ecosystem builds: `24.x`.
+The docs and ecosystem builds use Node `24.18.1`, with compatible range `>=24.18.1 <25`.
 
 ## Supported compatibility
 
-- **Node:** the package declares support for Node `>=20`. Ecosystem documentation scripts are validated with Node `24.x`.
+- **Node:** the package requires Node `>=24.18.1 <25`. Ecosystem documentation scripts are validated with Node `24.18.1` and Yarn `1.22.22`.
 - **Modules:** Foundation is published as ESM. Consumers should use ESM imports or a compatible bundler.
 - **Browsers:** DOM helpers target modern browsers with standard DOM APIs.
 - **SSR:** importing Foundation during SSR is safe. Helpers that mutate `document` should run only on the client or receive an explicit `documentRef`.

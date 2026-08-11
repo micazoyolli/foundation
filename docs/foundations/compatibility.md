@@ -48,11 +48,11 @@ La compatibilidad depende del tipo de helper. Foundation no requiere React.
 
 ## Versión de Node recomendada
 
-Para docs y builds del ecosistema se recomienda Node `24.x`.
+Para docs y builds del ecosistema se usa Node `24.18.1`, con rango compatible `>=24.18.1 <25`.
 
 ## Compatibilidad soportada
 
-- **Node:** el paquete declara soporte para Node `>=20`. Los scripts de documentación del ecosistema se validan con Node `24.x`.
+- **Node:** el paquete requiere Node `>=24.18.1 <25`. Los scripts de documentación del ecosistema se validan con Node `24.18.1` y Yarn `1.22.22`.
 - **Módulos:** Foundation se publica como ESM. Los consumidores deben usar importación ESM o un bundler compatible.
 - **Navegadores:** los helpers DOM están pensados para navegadores modernos con soporte de APIs DOM estándar.
 - **SSR:** importar Foundation durante SSR es seguro. Los helpers que modifican `document` deben ejecutarse solo en cliente o recibir un `documentRef` explícito.

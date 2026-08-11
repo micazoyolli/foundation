@@ -2,8 +2,8 @@
 
 ## Requirements
 
-- Node `24.x` recommended for the docs site and current ecosystem builds.
-- Yarn 1 in the current repositories.
+- Node `24.18.1`, with compatible range `>=24.18.1 <25`.
+- Yarn `1.22.22`.
 - Sass if you consume the SCSS entry point.
 
 ## Install
